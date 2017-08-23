@@ -120,7 +120,14 @@ var _ua = require('./ua').parseUA(window.navigator.userAgent),
             '</div>'
 
         ]
-    };
+    },
+  /***
+   * url查询参数
+   */
+  _params= (p4pBusinessLogic.prototype.parseURL(document.URL)||{}).params,
+  clickreferer=(_params||{}).clickreferer,
+  _referrer=clickreferer==56 ? 57 :32;
+
 
 /***
  * 初始化第一位置P4P的实例
@@ -142,7 +149,7 @@ var p4pBusinessLogicEntity = new p4pBusinessLogic({
      * [referrer 曝光、点击来源参数]
      * @type {Number}
      */
-    referrer: 31,
+    referrer: clickreferer==56 ? 56: 31,
     /**
      * [keyword 搜索关键词]
      * @type {String}
@@ -394,7 +401,7 @@ $.when(deferredData).done(function (data) {
          * [referrer 曝光、点击来源参数]
          * @type {Number}
          */
-        referrer: 32,
+        referrer: _referrer,
         /**
          * [cache 数据缓存]
          * @type {Object}
@@ -542,7 +549,7 @@ $.when(deferredData).done(function (data) {
          * [referrer 曝光、点击来源参数]
          * @type {Number}
          */
-        referrer: 32,
+        referrer: _referrer,
         /**
          * [cache 数据缓存]
          * @type {Object}

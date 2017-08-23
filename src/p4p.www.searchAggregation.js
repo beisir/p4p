@@ -84,16 +84,31 @@ window.slider = function (option) {
         move(RIGHT);
     })
 };
+
+    /***
+     *  获取url的的查询参数clickreferer，根据查询参数来初始化优质推荐的referrer  56  57
+     */
+ var _params= (p4pBusinessLogic.prototype.parseURL(document.URL)||{}).params,
+    clickreferer=(_params||{}).clickreferer,
+    _referrer;
+/***
+ * 根据url的参数初始化referrer值
+ */
+switch (clickreferer){
+      case '20':
+        _referrer =21;
+        break;
+      case '36':
+        _referrer =39;
+        break;
+      case '53':
+        _referrer =55;
+        break;
+    }
 /****
  * 创建p4p实例
  */
-var /***
-     *  获取url的的查询参数clickreferer，根据查询参数来初始化优质推荐的referrer
-     */
-    _params= (p4pBusinessLogic.prototype.parseURL(document.URL)||{}).params,
-    clickreferer=(_params||{}).clickreferer,
-    _referrer = clickreferer == 20 ? 21 : (clickreferer == 36 ? 39 : ''),
-    p4pBusinessLogicEntity = new p4pBusinessLogic({
+var  p4pBusinessLogicEntity = new p4pBusinessLogic({
         /****
          * 需要点击计费的元素
          */

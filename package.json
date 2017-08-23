@@ -7,7 +7,7 @@
     "build_old": "rm -rf dist/* & webpack",
     "server_old": "rm -rf dist/* & webpack & webpack-dev-server --show-error-details",
     "upload": "gulp upload",
-    "build": "node build/build.js & gulp",
+    "build": "node build/build.js",
     "dev": "node build/dev.js",
     "debugbuild": "node --inspect --debug-brk build/build.js",
     "debugdev": "node --inspect --debug-brk build/dev.js"

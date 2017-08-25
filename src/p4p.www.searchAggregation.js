@@ -104,6 +104,9 @@ switch (clickreferer){
       case '53':
         _referrer =55;
         break;
+      case '42':
+       _referrer=58;
+       break;
     }
 /****
  * 创建p4p实例

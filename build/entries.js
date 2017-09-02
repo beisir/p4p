@@ -202,5 +202,11 @@ module.exports = {
 	"url": "http://mall.hc360.com/secu/",
 	"filename": "html/p4p.b2b.machine.html",
 	"template": "html/p4p.b2b.machine.html"
-	}
+	},
+  "p4p.b2b.aladdinTitle": {
+    "desc": "阿拉丁大标题",
+    "url": "http://www.hc360.com/aladdinTitle/",
+    "filename": "html/p4p.b2b.aladdinTitle.html",
+    "template": "html/p4p.b2b.aladdinTitle.html"
+  }
 };

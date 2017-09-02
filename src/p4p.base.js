@@ -134,7 +134,7 @@ function p4pBusinessLogic(options) {
 
         /**
          * [preventDefaultLinkRedirect 是否取消默认行为链接跳转]
-         * 这个配置项主要作用是为了确保点击在当前页面打开的链接时，计费请求已正常结束，进而由 preventDefaultLinkRedirectCallBack 实现跳转 
+         * 这个配置项主要作用是为了确保点击在当前页面打开的链接时，计费请求已正常结束，进而由 preventDefaultLinkRedirectCallBack 实现跳转
          * @type {Boolean}
          */
         preventDefaultLinkRedirect: false,
@@ -181,7 +181,6 @@ p4pBusinessLogic.prototype.init = function() {
      * [加载数据]
      */
     $.when(_deferred).done(function(data) {
-
         /**
          * 派发数据加载完成事件
          */
@@ -450,7 +449,6 @@ p4pBusinessLogic.prototype.eventHandler = function(event) {
          * @type {Object}
          */
         _tempCacheData = _this.cache.prolist[_tempCacheIndex];
-
     /**
      * [数据缓存中不存在该索引值的数据时，则直接返回]
      */

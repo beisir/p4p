@@ -706,7 +706,7 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         '                    </div>',
         '                    <div class="bwBox1Price">',
         '                        <p>{{#product.pretreatPrice}}</p>',
-        '                        <span>起订量 ≥{{product.searchResultfoBespeakAmount}}个</span>',
+        '                        <span>起订量 ≥{{product.searchResultfoBespeakAmount}}{{product.searchResultfoMeasureUnit}}</span>',
         '                    </div>',
         '                    <div class="bwBox1Btn">',
         '                        <a data-sentLog="daSou" href="{{product.pretreatShopUrl}}" class="xPriceBtn" target="_blank">进入商铺</a>',

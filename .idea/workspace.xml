@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f55c251d-f71b-4151-a473-4b0d1b0f8c47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p4p.www.searchAggregation.js" afterPath="$PROJECT_DIR$/src/p4p.www.searchAggregation.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/html/p4p.b2b.aladdinTitle.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/p4p.b2b.aladdinTitle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/entries.js" afterPath="$PROJECT_DIR$/build/entries.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p4p.base.js" afterPath="$PROJECT_DIR$/src/p4p.base.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/p4p.search.resultList.js" afterPath="$PROJECT_DIR$/src/p4p.search.resultList.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,57 +24,101 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="p4p.www.searchAggregation.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/p4p.www.searchAggregation.js">
+      <file leaf-file-name="p4p.b2b.aladdinTitle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p4p.b2b.aladdinTitle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="430">
-              <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+            <state relative-caret-position="1024">
+              <caret line="91" column="171" lean-forward="false" selection-start-line="91" selection-start-column="171" selection-end-line="91" selection-end-column="171" />
               <folding>
-                <element signature="e#1023#2342#0" expanded="false" />
+                <marker date="1504311213198" expanded="true" signature="1783:1789" ph=" " />
+                <marker date="1504311213198" expanded="true" signature="3689:3694" ph="¥" />
+                <marker date="1504311213198" expanded="true" signature="3759:3766" ph="⁄" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="webpack.prod.conf.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/webpack.prod.conf.js">
+      <file leaf-file-name="p4p.base.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/p4p.base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="42" column="11" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="42" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="p4p.msite.aggregation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/p4p.msite.aggregation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="452">
-              <caret line="731" column="11" lean-forward="false" selection-start-line="731" selection-start-column="11" selection-end-line="731" selection-end-column="11" />
+            <state relative-caret-position="5868">
+              <caret line="326" column="38" lean-forward="false" selection-start-line="326" selection-start-column="38" selection-end-line="326" selection-end-column="38" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <element signature="e#11581#12027#0" expanded="false" />
+                <marker date="1504200387559" expanded="true" signature="16465:16478" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="p4p.search.resultList.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/p4p.search.resultList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding />
+            <state relative-caret-position="319">
+              <caret line="1904" column="0" lean-forward="true" selection-start-line="1904" selection-start-column="0" selection-end-line="1904" selection-end-column="0" />
+              <folding>
+                <element signature="e#2146#3968#0" expanded="false" />
+                <element signature="e#4211#16149#0" expanded="false" />
+                <element signature="e#16283#16910#0" expanded="false" />
+                <element signature="e#17698#17796#0" expanded="false" />
+                <element signature="e#18426#34819#0" expanded="false" />
+                <element signature="e#35141#37118#0" expanded="false" />
+                <element signature="e#37277#39197#0" expanded="false" />
+                <element signature="e#39330#39918#0" expanded="false" />
+                <element signature="e#40542#47142#0" expanded="false" />
+                <element signature="e#47294#60319#0" expanded="false" />
+                <marker date="1504308361877" expanded="true" signature="12235:12240" ph="¥" />
+                <marker date="1504308361877" expanded="true" signature="14406:14412" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="23973:23986" ph="..." />
+                <marker date="1504308361877" expanded="true" signature="27148:27161" ph="..." />
+                <marker date="1504308361877" expanded="true" signature="30729:30735" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="31334:31340" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="32115:32121" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="32306:32312" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="33026:33032" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="36728:36733" ph="¥" />
+                <marker date="1504308361877" expanded="true" signature="42240:42246" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="42354:42368" ph="..." />
+                <marker date="1504308361877" expanded="true" signature="42377:42384" ph="..." />
+                <marker date="1504308361877" expanded="true" signature="51130:51136" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="51727:51733" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="52490:52496" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="52679:52685" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="53389:53395" ph=" " />
+                <marker date="1504308361877" expanded="true" signature="57067:57072" ph="¥" />
+                <marker date="1504308361877" expanded="true" signature="72179:72184" ph="¥" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>p4pBusinessLogic</find>
       <find>_referrer</find>
+      <find>bwBox1Price</find>
+      <find>起订量</find>
+      <find>proListLeft</find>
+      <find>proListRig</find>
+      <find>getClickElementCacheIndexCallback</find>
+      <find>clickableElementSelector</find>
+      <find>deferredDOMContentLoaded</find>
+      <find>_template_params</find>
+      <find>_tempRegExp</find>
+      <find>onDataReady</find>
+      <find>debugger</find>
+      <find>22</find>
+      <find>pretreatResultfoAs</find>
+      <find>个</find>
+      <find>wordInclude</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -80,6 +131,11 @@
         <option value="$PROJECT_DIR$/src/p4p.msite.aggregation.js" />
         <option value="$PROJECT_DIR$/build/webpack.prod.conf.js" />
         <option value="$PROJECT_DIR$/src/p4p.www.searchAggregation.js" />
+        <option value="$PROJECT_DIR$/build/entries.js" />
+        <option value="$PROJECT_DIR$/src/p4p.base.js" />
+        <option value="$PROJECT_DIR$/src/html/p4p.b2b.aladdinTitle.html" />
+        <option value="$PROJECT_DIR$/src/p4p.search.resultList.js" />
+        <option value="$PROJECT_DIR$/src/p4p.b2b.aladdinTitle.js" />
       </list>
     </option>
   </component>
@@ -156,14 +212,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="html" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="p4p" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="p4p" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="build" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -171,6 +245,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="nodejs_interpreter_path" value="F:/Program Files/nodejs/node" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\p4p\src\html" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -185,7 +264,70 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
   </component>
@@ -202,24 +344,31 @@
       <workItem from="1503441120376" duration="2708000" />
       <workItem from="1503444153404" duration="1244000" />
       <workItem from="1503609423542" duration="1903000" />
+      <workItem from="1503702408367" duration="140000" />
+      <workItem from="1504197038881" duration="9069000" />
+      <workItem from="1504222781548" duration="654000" />
+      <workItem from="1504226812020" duration="1341000" />
+      <workItem from="1504283654067" duration="3505000" />
+      <workItem from="1504301692241" duration="3856000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5855000" />
+    <option name="totallyTimeSpent" value="24420000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="1" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19546892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2516269" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -242,13 +391,114 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/p4p.b2b.aladdinTitle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1504311213198" expanded="true" signature="1783:1789" ph=" " />
+            <marker date="1504311213198" expanded="true" signature="3689:3694" ph="¥" />
+            <marker date="1504311213198" expanded="true" signature="3759:3766" ph="⁄" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5868">
+          <caret line="326" column="38" lean-forward="false" selection-start-line="326" selection-start-column="38" selection-end-line="326" selection-end-column="38" />
+          <folding>
+            <marker date="1504200387559" expanded="true" signature="16465:16478" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.search.resultList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18396">
+          <caret line="1022" column="111" lean-forward="false" selection-start-line="1022" selection-start-column="3" selection-end-line="1022" selection-end-column="111" />
+          <folding>
+            <element signature="e#2146#3968#0" expanded="false" />
+            <element signature="e#4211#16149#0" expanded="false" />
+            <element signature="e#16283#16910#0" expanded="false" />
+            <element signature="e#17698#17796#0" expanded="false" />
+            <element signature="e#18426#34819#0" expanded="false" />
+            <element signature="e#35141#37118#0" expanded="false" />
+            <element signature="e#37277#39197#0" expanded="false" />
+            <element signature="e#39330#39918#0" expanded="false" />
+            <element signature="e#40542#47142#0" expanded="false" />
+            <element signature="e#47294#60319#0" expanded="false" />
+            <marker date="1504308361877" expanded="true" signature="12235:12240" ph="¥" />
+            <marker date="1504308361877" expanded="true" signature="14406:14412" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="23973:23986" ph="..." />
+            <marker date="1504308361877" expanded="true" signature="27148:27161" ph="..." />
+            <marker date="1504308361877" expanded="true" signature="30729:30735" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="31334:31340" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="32115:32121" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="32306:32312" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="33026:33032" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="36728:36733" ph="¥" />
+            <marker date="1504308361877" expanded="true" signature="42240:42246" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="42354:42368" ph="..." />
+            <marker date="1504308361877" expanded="true" signature="42377:42384" ph="..." />
+            <marker date="1504308361877" expanded="true" signature="51130:51136" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="51727:51733" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="52490:52496" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="52679:52685" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="53389:53395" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="57067:57072" ph="¥" />
+            <marker date="1504308361877" expanded="true" signature="72179:72184" ph="¥" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.b2b.aladdinTitle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1504311213198" expanded="true" signature="1783:1789" ph=" " />
+            <marker date="1504311213198" expanded="true" signature="3689:3694" ph="¥" />
+            <marker date="1504311213198" expanded="true" signature="3759:3766" ph="⁄" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.b2b.aladdinTitle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1504311213198" expanded="true" signature="1783:1789" ph=" " />
+            <marker date="1504311213198" expanded="true" signature="3689:3694" ph="¥" />
+            <marker date="1504311213198" expanded="true" signature="3759:3766" ph="⁄" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.b2b.aladdinTitle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1504311213198" expanded="true" signature="1783:1789" ph=" " />
+            <marker date="1504311213198" expanded="true" signature="3689:3694" ph="¥" />
+            <marker date="1504311213198" expanded="true" signature="3759:3766" ph="⁄" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/p4p.www.searchAggregation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="99" column="14" lean-forward="false" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
-          <folding>
-            <element signature="e#1023#2342#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="1188">
+          <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.jsite.searchResultList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -256,7 +506,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="42" column="11" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="42" selection-end-column="11" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.msite.aggregation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12870">
+          <caret line="731" column="11" lean-forward="false" selection-start-line="731" selection-start-column="11" selection-end-line="731" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -264,18 +520,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/p4p.msite.aggregation.js">
+    <entry file="file://$PROJECT_DIR$/src/p4p.search.resultList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12870">
-          <caret line="731" column="11" lean-forward="true" selection-start-line="731" selection-start-column="11" selection-end-line="731" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#11581#12027#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="6894">
+          <caret line="383" column="28" lean-forward="false" selection-start-line="383" selection-start-column="25" selection-end-line="383" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -283,9 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#1023#2342#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -293,7 +541,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="42" column="11" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="42" selection-end-column="11" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.msite.aggregation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12870">
+          <caret line="731" column="11" lean-forward="false" selection-start-line="731" selection-start-column="11" selection-end-line="731" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.www.searchAggregation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="99" column="14" lean-forward="false" selection-start-line="99" selection-start-column="14" selection-end-line="99" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.prod.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="11" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="42" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.msite.aggregation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12870">
+          <caret line="731" column="11" lean-forward="true" selection-start-line="731" selection-start-column="11" selection-end-line="731" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.www.searchAggregation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.prod.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="42" column="11" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="42" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -301,10 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2304">
           <caret line="128" column="11" lean-forward="false" selection-start-line="128" selection-start-column="2" selection-end-line="128" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#11581#12027#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -312,7 +611,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -320,7 +618,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -349,18 +646,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="756">
           <caret line="42" column="11" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="42" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/p4p.msite.aggregation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
+        <state relative-caret-position="12870">
           <caret line="731" column="11" lean-forward="false" selection-start-line="731" selection-start-column="11" selection-end-line="731" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#11581#12027#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -368,8 +660,101 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="108" column="13" lean-forward="false" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/entries.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="208" column="47" lean-forward="false" selection-start-line="208" selection-start-column="17" selection-end-line="208" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.b2b.3yShopIndex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="129" column="30" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="129" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/html/p4p.b2b.aladdinTitle.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="441" lean-forward="false" selection-start-line="21" selection-start-column="425" selection-end-line="21" selection-end-column="441" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.b2b.freeShopCompany.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="95" lean-forward="false" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.jsite.searchResultList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3634">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5868">
+          <caret line="326" column="38" lean-forward="false" selection-start-line="326" selection-start-column="38" selection-end-line="326" selection-end-column="38" />
           <folding>
-            <element signature="e#1023#2342#0" expanded="false" />
+            <marker date="1504200387559" expanded="true" signature="16465:16478" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.b2b.aladdinTitle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1024">
+          <caret line="91" column="171" lean-forward="false" selection-start-line="91" selection-start-column="171" selection-end-line="91" selection-end-column="171" />
+          <folding>
+            <marker date="1504311213198" expanded="true" signature="1783:1789" ph=" " />
+            <marker date="1504311213198" expanded="true" signature="3689:3694" ph="¥" />
+            <marker date="1504311213198" expanded="true" signature="3759:3766" ph="⁄" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/p4p.search.resultList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="1904" column="0" lean-forward="true" selection-start-line="1904" selection-start-column="0" selection-end-line="1904" selection-end-column="0" />
+          <folding>
+            <element signature="e#2146#3968#0" expanded="false" />
+            <element signature="e#4211#16149#0" expanded="false" />
+            <element signature="e#16283#16910#0" expanded="false" />
+            <element signature="e#17698#17796#0" expanded="false" />
+            <element signature="e#18426#34819#0" expanded="false" />
+            <element signature="e#35141#37118#0" expanded="false" />
+            <element signature="e#37277#39197#0" expanded="false" />
+            <element signature="e#39330#39918#0" expanded="false" />
+            <element signature="e#40542#47142#0" expanded="false" />
+            <element signature="e#47294#60319#0" expanded="false" />
+            <marker date="1504308361877" expanded="true" signature="12235:12240" ph="¥" />
+            <marker date="1504308361877" expanded="true" signature="14406:14412" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="23973:23986" ph="..." />
+            <marker date="1504308361877" expanded="true" signature="27148:27161" ph="..." />
+            <marker date="1504308361877" expanded="true" signature="30729:30735" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="31334:31340" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="32115:32121" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="32306:32312" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="33026:33032" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="36728:36733" ph="¥" />
+            <marker date="1504308361877" expanded="true" signature="42240:42246" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="42354:42368" ph="..." />
+            <marker date="1504308361877" expanded="true" signature="42377:42384" ph="..." />
+            <marker date="1504308361877" expanded="true" signature="51130:51136" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="51727:51733" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="52490:52496" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="52679:52685" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="53389:53395" ph=" " />
+            <marker date="1504308361877" expanded="true" signature="57067:57072" ph="¥" />
+            <marker date="1504308361877" expanded="true" signature="72179:72184" ph="¥" />
           </folding>
         </state>
       </provider>

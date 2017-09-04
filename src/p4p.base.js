@@ -318,7 +318,8 @@ p4pBusinessLogic.prototype.pretreatData = function() {
             _tempEntity.pretreatPrice = (parseFloat(_tempEntity.searchResultfoUnitPrice) === 0) ? '面议' : ('&yen;' + _tempEntity.searchResultfoUnitPrice + ' &frasl;' + _tempEntity.searchResultfoMeasureUnit),
             _tempEntity.pretreatIsTrade = (parseFloat(_tempEntity.searchResultfoUnitPrice) === 0) ? false : parseInt(_tempEntity.searchResultfoTrading),
             _tempEntity.pretreatMobilePhone = _tempEntity.searchResultfoTelephone ? searchResultfoTelephone : _tempEntity.searchResultfoML,
-            _tempEntity.pretreatArea = _tempEntity.searchResultfoZone.replace('中国', '').replace(/:/g, ' ') || '商家暂未提供';
+            //_tempEntity.pretreatArea = _tempEntity.searchResultfoZone.replace('中国', '').replace(/:/g, ' ') || '商家暂未提供';
+            _tempEntity.pretreatArea = _tempEntity.searchResultfoZone ? ( _tempEntity.searchResultfoZone.replace('中国', '').replace(/:/g, ' ')) : '商家暂未提供';
     }
 
     /** [analyzeAttr 解析属性值] */

@@ -51,7 +51,7 @@ function ConversionPrice(price) {
       {unit: '亿', measure: 10000}
     ],
     shiftUnit = {};
-  while ((ConvertList.length >= 0) && price >= ConvertList[0].measure && (shiftUnit = ConvertList.shift())) {
+  while ((ConvertList.length > 0) && price >= ConvertList[0].measure && (shiftUnit = ConvertList.shift())) {
     price = price / shiftUnit.measure
   }
   return price.toFixed(2) + (shiftUnit.unit || "")

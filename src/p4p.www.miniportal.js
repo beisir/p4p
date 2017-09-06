@@ -138,7 +138,7 @@ $(function() {
 					'				<a title="优质" class="newYZIco">优质</a>',
 					'				<a title="开关拼实惠" class="newIco3">促</a>',
 					'				{{if product.pretreatIsTrade}}<a title="在线交易" class="newIco4">交易</a>{{/if}}',
-					'				{{if product.searchResultfoQq}}<a title="在线咨询" class="newQQIco" href="http://wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes">交易</a>{{/if}}',
+					'				{{if product.searchResultfoQq}}<a title="在线咨询" class="newQQIco" href="//wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes">交易</a>{{/if}}',
 					'			</div>',
 					'			<div class="rightCon">',
 					'				<div class="bwParameter">',
@@ -183,7 +183,7 @@ $(function() {
 					'					<a title="优质" class="newYZIco">优质</a>',
 					'					<a title="开关拼实惠" class="newIco3">促</a>',
 					'					{{if product.pretreatIsTrade}}<a title="在线交易" class="newIco4">交易</a>{{/if}}',
-					'					{{if product.searchResultfoQq}}<a title="在线咨询" class="newQQIco" href="http://wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes">交易</a>{{/if}}',
+					'					{{if product.searchResultfoQq}}<a title="在线咨询" class="newQQIco" href="//wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes">交易</a>{{/if}}',
 					'				</div>',
 					'				<div class="rightCon">',
 					'					<div class="bwParameter">',
@@ -454,7 +454,7 @@ $(function() {
 		/**
 		 * [异步加载相应广告位]
 		 */
-		baiduADMapping[pathname][_this.cache.prolist.length] && $.getScript("http://cbjs.baidu.com/js/m.js", function() {
+		baiduADMapping[pathname][_this.cache.prolist.length] && $.getScript("//cbjs.baidu.com/js/m.js", function() {
 			BAIDU_CLB_fillSlotAsync(baiduADMapping[pathname][_this.cache.prolist.length], "DOMBUA");
 		});
 	});

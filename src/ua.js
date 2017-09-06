@@ -150,7 +150,7 @@ module.exports = {
 				 * Webkit nightly 1/2008:525+    <-- Supports DOMContentLoaded event.
 				 *                                   yahoo.com user agent hack removed.
 				 * </pre>
-				 * http://en.wikipedia.org/wiki/Safari_version_history
+				 * //en.wikipedia.org/wiki/Safari_version_history
 				 * @property webkit
 				 * @type float
 				 * @static

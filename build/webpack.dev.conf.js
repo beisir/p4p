@@ -23,10 +23,10 @@ module.exports = merge(baseWebpackConfig, {
 		new webpack.DefinePlugin({
 			'process.env': process.env.Node_Env
 		}),
-		// https://github.com/glenjamin/webpack-hot-middleware#installation--usage
+		// //github.com/glenjamin/webpack-hot-middleware#installation--usage
 		new webpack.HotModuleReplacementPlugin(),
 		// new webpack.NoEmitOnErrorsPlugin(),
-		// https://github.com/ampedandwired/html-webpack-plugin
+		// //github.com/ampedandwired/html-webpack-plugin
 		// new HtmlWebpackPlugin({
 		// 	filename: config.index,
 		// 	template: config.template,

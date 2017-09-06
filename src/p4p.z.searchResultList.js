@@ -183,7 +183,7 @@ $(function () {
     /**
      * [加载顶部工具条]
      */
-    HC.HUB.addScript('http://style.org.hc360.com/js/build/source/widgets/flowconfig/hc.flowconfig.min.js', function () {
+    HC.HUB.addScript('//style.org.hc360.com/js/build/source/widgets/flowconfig/hc.flowconfig.min.js', function () {
         HC.W.load('topnav', function () {
             var topNavList = $('.webTopNav')[0];
             topnav.init(false);
@@ -260,7 +260,7 @@ $(function () {
     /**
      * [callback 渲染分页按钮]
      */
-    HC.HUB.addScript('http://style.org.hc360.com/js/build/source/widgets/$.Pagination.min.js', function () {
+    HC.HUB.addScript('//style.org.hc360.com/js/build/source/widgets/$.Pagination.min.js', function () {
         var pageSize = Number(window.pageSize) || 1,
             pageIndex = (Number(window.pageIndex) || 1) - 1,
             recordCount = Number(window.recordCount) || 1,
@@ -279,7 +279,7 @@ $(function () {
             prev_show_always: true,  //是否显示“前一页”分页按钮
             next_show_always: true,
             callback: function (pageindex) {
-                var url = ' http://z.hc360.com/p4psearch/search.html?key=';
+                var url = ' //z.hc360.com/p4psearch/search.html?key=';
                 url += keyword + '&page=' + (pageindex+1) + '&p4psize=' + window.p4pSize  + '&recordCount=' + recordCount;
                 window.location.href = url;
             }

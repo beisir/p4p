@@ -6,7 +6,7 @@ module.exports = {
         index: path.resolve(__dirname, '../dist/html/page.homepage.html'),
         assetsRoot: path.resolve(__dirname, '../dist'),
         assetsSubDirectory: '',
-        assetsPublicPath: 'http://style.org.hc360.cn/js/module/p4p/dist/',
+        assetsPublicPath: '//style.org.hc360.cn/js/module/p4p/dist/',
         productionSourceMap: false,
         // Gzip off by default as many popular static hosts such as
         // Surge or Netlify already gzip all static assets for you.
@@ -31,7 +31,7 @@ module.exports = {
         proxyTable: {},
         // CSS Sourcemaps off by default because relative paths are "buggy"
         // with this option, according to the CSS-Loader README
-        // (https://github.com/webpack/css-loader#sourcemaps)
+        // (//github.com/webpack/css-loader#sourcemaps)
         // In our experience, they generally work as expected,
         // just be aware of this issue when enabling this option.
         cssSourceMap: false,

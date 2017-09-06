@@ -7,24 +7,24 @@ var p4pBusinessLogic = require('./p4p.base'),
     '<ul>',
     '{{each products as product i}}',
     '<li>',
-    '<div class="proImg"><a href="http://b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title=""><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}"></a></div>',
+    '<div class="proImg"><a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title=""><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}"></a></div>',
     '<div class="proBot">',
     '<dl>',
     '<dt><span class="seaNewPrice">{{#product.pretreatPrice}}</span></dt>',
-    '<dd class="newName"><a href="http://b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title="{{product.searchResultfoTitle}}">{{#product.pretreatTitle}}</a></dd>',
+    '<dd class="newName"><a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title="{{product.searchResultfoTitle}}">{{#product.pretreatTitle}}</a></dd>',
     '<dd class="newCname"><p><a href="{{product.pretreatShopUrl}}" target="_blank" title="{{ product.searchResultfoCompany }}">{{ product.searchResultfoCompany }}</a></p>',
     '{{if (pretreatResultfoAs) }}',
-    '<div class="newNameRight"><a href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html" target="_blank" class="mmtIco" title="认证会员">{{product.searchResultfoMmtYearAge}}年</a></div>',
+    '<div class="newNameRight"><a href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html" target="_blank" class="mmtIco" title="认证会员">{{product.searchResultfoMmtYearAge}}年</a></div>',
     '{{/if}}',
     '</dd>',
     '<dd class="newBotBox">',
     '<div class="nBotLeft"><div class="areaBox" title="{{product.pretreatArea}}"><span>{{product.pretreatArea}}</span></div>',
     '{{if (preSearchResultfoauthInfo) }}',
-    '<a class="newIco100" title="企业信息真实性已认证" target="_blank" href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html"></a>',
+    '<a class="newIco100" title="企业信息真实性已认证" target="_blank" href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html"></a>',
     '{{/if}}',
     '</div>',
     '{{if (product.searchResultfoQq!="") }}',
-    '<div class="nBotRight"><a class="newQQIco" href="http://wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" title="QQ交谈" ><em class="qqonline">&nbsp;</em></a></div>',
+    '<div class="nBotRight"><a class="newQQIco" href="//wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" title="QQ交谈" ><em class="qqonline">&nbsp;</em></a></div>',
     '{{/if}}',
     '</dd>',
     '</dl>',
@@ -54,7 +54,7 @@ function ConversionPrice(price) {
  * 调用自然搜索结果页
  */
 $.ajax({
-  url: 'http://s.hc360.com/getmmtlast.cgi',
+  url: '//s.hc360.com/getmmtlast.cgi',
   data: {
     w: window.p4pkeyword,
     sys: 'aladdin',
@@ -86,7 +86,7 @@ $.ajax({
         _tempEntity.pretreatTitle = _tempEntity.searchResultfoTitle.replace(_tempRegExp, '<span>' + window.p4pkeyword+ '</span>'),
 
         //公司链接地址
-        _tempEntity.pretreatShopUrl = 'http://' + _tempEntity.searchResultfoUserName + '.b2b.hc360.com',
+        _tempEntity.pretreatShopUrl = '//' + _tempEntity.searchResultfoUserName + '.b2b.hc360.com',
 
         // 价格
         _tempEntity.pretreatPrice = (parseFloat(_tempEntity.searchResultfoUnitPrice) === 0) ? '面议' : ('<s>&yen;</s>' + ConversionPrice(_tempEntity.searchResultfoUnitPrice) + ' &frasl;' + _tempEntity.searchResultfoMeasureUnit),

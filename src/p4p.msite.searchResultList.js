@@ -36,15 +36,15 @@ $(function () {
                     '{{each products as product i}}',
                     '<li class="sty1">',
                     '<div class="ListImgBox">',
-                    '<a href="http://m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}">',
+                    '<a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}">',
                     '<img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}">',
                     '</a>',
                     '</div>',
                     '<div class="ImgBot">',
                     '<p class="til">',
-                    '<a href="http://m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.corKeyword}}">{{product.corKeyword}}</a>',
+                    '<a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.corKeyword}}">{{product.corKeyword}}</a>',
                     '</p>',
-                    '<p class="comp"><a href="http://m.hc360.com/b2b/{{product.searchResultfoUserName}}/" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a></p>',
+                    '<p class="comp"><a href="//m.hc360.com/b2b/{{product.searchResultfoUserName}}/" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a></p>',
                     '<div class="icoBox">',
                     '<dl>',
                     '<dd>',
@@ -56,7 +56,7 @@ $(function () {
                     '<div class="priBox">￥{{product.searchResultfoUnitPrice}} <span>/ {{product.searchResultfoMeasureUnit}}</span>',
                     '</div>',
                     '<div class="qtBox">',
-                    '<a href="http://m.hc360.com/supplyself/{{product.searchResultfoId}}.html" rel="nofollow" target="_blank" onclick="sendUserlogsElement(\'UserBehavior_p4p_m_search_xunjia\')">询价</a>',
+                    '<a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" rel="nofollow" target="_blank" onclick="sendUserlogsElement(\'UserBehavior_p4p_m_search_xunjia\')">询价</a>',
                     '</div>',
                     '</div>',
                     '</li>',
@@ -75,11 +75,11 @@ $(function () {
                     '{{each products as product i}}',
                     '<li class="sty2">',
                     '<div class="listImg">',
-                    '<a href="http://m.hc360.com/supplyself/{{product.searchResultfoId}}.html"><img src="{{product.searchResultfoImageBig}}" alt=""></a>',
+                    '<a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html"><img src="{{product.searchResultfoImageBig}}" alt=""></a>',
                     '</div>',
                     '<dl>',
-                    '<dt><a href="http://m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.corKeyword}}">{{product.corKeyword}}</a></dt>',
-                    '<dd><a href="http://m.hc360.com/supplyself/{{product.searchResultfoId}}.html" onclick="sendUserlogsElement(\'UserBehavior_p4p_m_search_xunjia\')">询价</a></dd>',
+                    '<dt><a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.corKeyword}}">{{product.corKeyword}}</a></dt>',
+                    '<dd><a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" onclick="sendUserlogsElement(\'UserBehavior_p4p_m_search_xunjia\')">询价</a></dd>',
                     '</dl>',
                     '</li>',
                     '{{/each}}'
@@ -108,7 +108,7 @@ $(function () {
          *  重新拽一个p4p接口，参数是当前页面p4p的bcid以逗号拼接的字符串，返回当前p4p的商品的关键词和第二张商品图片
          */
         return $.ajax({
-            url: 'http://p4pdetail.hc360.com/p4pdetail/common/get/businImage.html',
+            url: '//p4pdetail.hc360.com/p4pdetail/common/get/businImage.html',
             method: 'get',
             async: false,
             data: {
@@ -124,7 +124,7 @@ $(function () {
      */
     var deferr = (function () {
         return $.ajax({
-            url: 'http://s.hc360.com/getmmtlast.cgi',
+            url: '//s.hc360.com/getmmtlast.cgi',
             data: {
                 source: 5,
                 w: keyWord,

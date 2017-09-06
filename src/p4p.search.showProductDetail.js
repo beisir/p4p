@@ -31,7 +31,7 @@
             '        {{if product.searchResultfotransLevelShow}}',
             '        <dt>交易等级：</dt>',
             '        <dd>',
-            '            <a href="http://b2b.hc360.com/bussGrade/buss_grade.html" target="_blank">',
+            '            <a href="//b2b.hc360.com/bussGrade/buss_grade.html" target="_blank">',
             '                <div class="starBox">',
             '                    {{each product.searchResultfotransLevelLength as level i}}',
             '                    <em {{if product.searchResultfotransLevelClass}}class="{{product.searchResultfotransLevelClass}}"{{/if}}></em>',
@@ -52,7 +52,7 @@
             '        {{/if}}',
             '        {{if product.searchResultfoproductNum}}',
             '        <dt>供应产品：</dt>',
-            '        <dd><a target="_blank" href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/shop/businwindow.html" p4pclickable data-sentLog="daSou">{{product.searchResultfoproductNum}}条</a></dd>',
+            '        <dd><a target="_blank" href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/businwindow.html" p4pclickable data-sentLog="daSou">{{product.searchResultfoproductNum}}条</a></dd>',
             '        {{/if}}',
             '        {{if product.searchResultfoBm}}',
             '        <dt>经营模式：</dt>',
@@ -67,8 +67,8 @@
             '        <dl>',
             '            <dt>商家荣誉：</dt>',
             '            <dd>',
-            '                <a href="http://b2b.hc360.com/p4p/index.html" title="优质卖家" target="_blank" class="p4pIco2">&nbsp;</a>',
-            '                {{if product.searchResultfobw==1}}<a target="_blank" href="http://info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newIco7">标王</a>{{/if}}',
+            '                <a href="//b2b.hc360.com/p4p/index.html" title="优质卖家" target="_blank" class="p4pIco2">&nbsp;</a>',
+            '                {{if product.searchResultfobw==1}}<a target="_blank" href="//info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newIco7">标王</a>{{/if}}',
             '            </dd>',
             '        </dl>',
             '    </div>',
@@ -99,7 +99,7 @@
      * [获取数据并渲染悬浮框]
      */
     $.ajax({
-        url: 'http://s.hc360.com/cgi-bin/getmmtlast.cgi',
+        url: '//s.hc360.com/cgi-bin/getmmtlast.cgi',
         type: 'GET',
         dataType: 'jsonp',
         jsonp: 'jsoncallback',
@@ -294,7 +294,7 @@ function companyinfo(tag, company_id_temp, company_num_temp, page_temp, bc_id_te
     var div = document.createElement("div");
     div.className = "newShowBox";
     $.ajax({
-        url: 'http://s.hc360.com/cgi-bin/getmmtlast.cgi',
+        url: '//s.hc360.com/cgi-bin/getmmtlast.cgi',
         type: 'GET',
         dataType: 'jsonp',
         jsonp: 'jsoncallback',
@@ -340,7 +340,7 @@ function companyinfo(tag, company_id_temp, company_num_temp, page_temp, bc_id_te
              * [companyUrl 链接地址]
              * @type {String}
              */
-            var companyUrl = 'http://' + company_id_temp + '.b2b.hc360.com/shop/show.html';
+            var companyUrl = '//' + company_id_temp + '.b2b.hc360.com/shop/show.html';
             /**
              * [交易等级]
              */
@@ -380,7 +380,7 @@ function companyinfo(tag, company_id_temp, company_num_temp, page_temp, bc_id_te
                      * 拼接交易等级字符串
                      */
                     innertxt += '<dt>交易等级：</dt>';
-                    innertxt += '<dd><a href="http://b2b.hc360.com/bussGrade/buss_grade.html" target="_blank"><div class="starBox" onclick="search_log_new(\'supply_tradelevel_\', \'' + company_num_temp + '\',\'' + page_temp + '\', \'' + company_id_temp + '\',\'' + bc_id_temp + '\')">';
+                    innertxt += '<dd><a href="//b2b.hc360.com/bussGrade/buss_grade.html" target="_blank"><div class="starBox" onclick="search_log_new(\'supply_tradelevel_\', \'' + company_num_temp + '\',\'' + page_temp + '\', \'' + company_id_temp + '\',\'' + bc_id_temp + '\')">';
                     for (i = 0; i < mmt_grade_length; i++) {
                         innertxt += '<em' + (gradeClass ? ' class=' + gradeClass : '') + '></em>';
                     }
@@ -430,7 +430,7 @@ function companyinfo(tag, company_id_temp, company_num_temp, page_temp, bc_id_te
                 .replace(/#bcid#/g, bc_id_temp);
             if (mmt_procount) {
                 innertxt += '<dt>供应产品：</dt>';
-                innertxt += '<dd><a target="_blank" href="http://' + company_id_temp + '.b2b.hc360.com/shop/businwindow.html" onclick="HC.UBA.sendUserlogsElement(\'' + supplyProductUBAKeyword + '\')">' + mmt_procount + '条</a></dd>';
+                innertxt += '<dd><a target="_blank" href="//' + company_id_temp + '.b2b.hc360.com/shop/businwindow.html" onclick="HC.UBA.sendUserlogsElement(\'' + supplyProductUBAKeyword + '\')">' + mmt_procount + '条</a></dd>';
             }
             /**
              * [经营模式、认证信息]
@@ -475,7 +475,7 @@ function companyinfo(tag, company_id_temp, company_num_temp, page_temp, bc_id_te
             if (ten_Medal == '1' || top_bw == '1') {
                 innertxt += '<div class="honor"><dl><dt>商家荣誉：</dt>';
                 if (top_bw == '1') {
-                    innertxt += '<dd><a target="_blank" href="http://info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newIco7" onclick="search_log_new(\'supply_bwsjtb_\', \'' + company_num_temp + '\',\'' + page_temp + '\', \'' + company_id_temp + '\',\'' + bc_id_temp + '\')">标王</a>';
+                    innertxt += '<dd><a target="_blank" href="//info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newIco7" onclick="search_log_new(\'supply_bwsjtb_\', \'' + company_num_temp + '\',\'' + page_temp + '\', \'' + company_id_temp + '\',\'' + bc_id_temp + '\')">标王</a>';
                 }
                 if (ten_Medal == '1') {
                     if (top_bw == '0')

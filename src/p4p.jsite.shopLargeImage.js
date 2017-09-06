@@ -95,8 +95,8 @@ $(function () {
             _tempHTMLArray = [
                 '{{each products as product i}}',
                 '<li data-index={{i}}>',
-                    '<div class="img-box"><a href="http://js.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}"><img src="{{product.searchResultfoImageSmall}}" alt="{{product.searchResultfoTitle}}"></a></div>',
-                    '<p class="pro-name"><a href="http://js.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}">{{product.searchResultfoTitle}}</a></p>',
+                    '<div class="img-box"><a href="//js.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}"><img src="{{product.searchResultfoImageSmall}}" alt="{{product.searchResultfoTitle}}"></a></div>',
+                    '<p class="pro-name"><a href="//js.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}">{{product.searchResultfoTitle}}</a></p>',
                     '<p>{{#product.pretreatPrice}}</p>',
                 '</li>',
                 '{{/each}}'

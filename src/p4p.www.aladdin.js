@@ -132,7 +132,7 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function(data) {
 			'					<div class="bwBox1Bot">',
 			'						供应商：<a href="{{product.pretreatShopUrl}}" target="_blank">{{product.searchResultfoCompany}}</a>',
 			'						<span>',
-			'							<a rel="nofollow" target="_blank"  href="http://s.hc360.com/?mc=seller&amp;w={{keyword}}&amp;z={{product.pretreatArea}}" data-useractivelogs="ald_UserBehavior_s_trade">{{product.pretreatArea}}</a>',
+			'							<a rel="nofollow" target="_blank"  href="//s.hc360.com/?mc=seller&amp;w={{keyword}}&amp;z={{product.pretreatArea}}" data-useractivelogs="ald_UserBehavior_s_trade">{{product.pretreatArea}}</a>',
 			'						</span>',
 			'					</div>',
 			'				</div>',

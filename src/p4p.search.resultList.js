@@ -160,7 +160,7 @@ window.scrollLoading_right_callback = function () {
       /**
        * [加载垂直滚动插件]
        */
-      $.getScript('http://style.org.hc360.cn/js/build/source/widgets/vTicker.min.js', function () {
+      $.getScript('//style.org.hc360.cn/js/build/source/widgets/vTicker.min.js', function () {
 
         /**
          * [包裹元素垂直滚动]
@@ -208,7 +208,7 @@ window.showProductDetail = function (element, data, callback) {
       '        {{if product.searchResultfotransLevelShow}}',
       '        <dt>交易等级：</dt>',
       '        <dd>',
-      '            <a href="http://b2b.hc360.com/bussGrade/buss_grade.html" target="_blank">',
+      '            <a href="//b2b.hc360.com/bussGrade/buss_grade.html" target="_blank">',
       '                <div class="starBox">',
       '                    {{each product.searchResultfotransLevelLength as level i}}',
       '                    <em {{if product.searchResultfotransLevelClass}}class="{{product.searchResultfotransLevelClass}}"{{/if}}></em>',
@@ -229,7 +229,7 @@ window.showProductDetail = function (element, data, callback) {
       '        {{/if}}',
       '        {{if product.searchResultfoproductNum}}',
       '        <dt>供应产品：</dt>',
-      '        <dd><a target="_blank" href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/shop/businwindow.html" p4pclickable data-sentLog="daSou">{{product.searchResultfoproductNum}}条</a></dd>',
+      '        <dd><a target="_blank" href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/businwindow.html" p4pclickable data-sentLog="daSou">{{product.searchResultfoproductNum}}条</a></dd>',
       '        {{/if}}',
       '        {{if product.searchResultfoBm}}',
       '        <dt>经营模式：</dt>',
@@ -244,8 +244,8 @@ window.showProductDetail = function (element, data, callback) {
       // '        <dl>',
       // '            <dt>商家荣誉：</dt>',
       // '            <dd>',
-      // '                <a href="http://b2b.hc360.com/p4p/index.html" title="优质卖家" target="_blank" class="p4pIco2">&nbsp;</a>',
-      // '                {{if product.searchResultfobw==1}}<a target="_blank" href="http://info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newIco7">标王</a>{{/if}}',
+      // '                <a href="//b2b.hc360.com/p4p/index.html" title="优质卖家" target="_blank" class="p4pIco2">&nbsp;</a>',
+      // '                {{if product.searchResultfobw==1}}<a target="_blank" href="//info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newIco7">标王</a>{{/if}}',
       // '            </dd>',
       // '        </dl>',
       // '    </div>',
@@ -284,7 +284,7 @@ window.showProductDetail = function (element, data, callback) {
 
   // 区间价接口对象
   var spontaneouShop = $.ajax({
-      url: 'http://wsdetail.b2b.hc360.com/getSupplyPrice',
+      url: '//wsdetail.b2b.hc360.com/getSupplyPrice',
       dataType: 'jsonp',
       jsonp: 'callback',
       timeout: 3000,
@@ -294,7 +294,7 @@ window.showProductDetail = function (element, data, callback) {
     }),
     // 除区间价之外的其他字段接口对象
     searchUrl = $.ajax({
-      url: 'http://s.hc360.com/cgi-bin/getmmtlast.cgi',
+      url: '//s.hc360.com/cgi-bin/getmmtlast.cgi',
       type: 'GET',
       dataType: 'jsonp',
       jsonp: 'jsoncallback',
@@ -694,7 +694,7 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         '                    </h2>',
         '                    <a title="优质" class="newYZIco">优质</a>',
         '                    <a title="开关拼实惠" class="newIco3">促</a> {{if product.pretreatIsTrade}}<a title="在线交易" class="newIco4">交易</a>{{/if}}',
-        '                    <a data-sentLog="daSou" title="在线咨询" href="http://wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" class="newQQIco" target="_blank">QQ</a>',
+        '                    <a data-sentLog="daSou" title="在线咨询" href="//wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" class="newQQIco" target="_blank">QQ</a>',
         '                </div>',
         '                <div class="rightCon">',
         '                    <div class="bwParameter">',
@@ -742,7 +742,7 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         '                        <p>{{#product.pretreatPrice}}</p>',
         '                        <a title="优质" class="newYZIco">优质</a>',
         '                        <a title="开关拼实惠" class="newIco3">促</a> {{if product.pretreatIsTrade}}<a title="在线交易" class="newIco4">交易</a>{{/if}}',
-        '                        <a data-sentLog="daSou" title="在线咨询" href="http://wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" class="newQQIco" target="_blank">QQ</a>',
+        '                        <a data-sentLog="daSou" title="在线咨询" href="//wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" class="newQQIco" target="_blank">QQ</a>',
         '                    </div>',
         '                </div>',
         '                <div class="rightCon">',
@@ -810,7 +810,7 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         '                    <a title="优质" class="newYZIco">优质</a>',
         '                    <a title="开关拼实惠" class="newIco3">促</a>',
         '                    {{if product.pretreatIsTrade}}<a title="在线交易" class="newIco4">交易</a>{{/if}}',
-        '                    <a data-sentLog="daSou" title="在线咨询" href="http://wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" class="newQQIco" target="_blank">QQ</a>',
+        '                    <a data-sentLog="daSou" title="在线咨询" href="//wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" class="newQQIco" target="_blank">QQ</a>',
         '                </div>',
         '                <div class="bwBox1Bot">供应商：<a data-sentLog="daSou" href="{{product.pretreatShopUrl}}" target="_blank" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a></div>',
         '                <div class="bwHide" style="display:none;">',
@@ -851,8 +851,8 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         '            </a>',
         '            <div class="{{if product.searchResultfoBrand}}similars{{else}}newImgAlert{{/if}}">',
         '                <span></span>',
-        '                <a href="http://s.hc360.com/cgi-bin/simsamepar?keyword={{product.searchKeyword}}&bcid={{product.searchResultfoId}}&ssp=1" target="_blank" p4pclickable data-sentLog="daSou">相似</a>',
-        '                {{if product.searchResultfoBrand}}<a href="http://s.hc360.com/cgi-bin/simsamepar?keyword={{product.searchKeyword}}&bcid={{product.searchResultfoId}}&ssp=2" target="_blank" p4pclickable data-sentLog="daSou">同款</a>{{/if}}',
+        '                <a href="//s.hc360.com/cgi-bin/simsamepar?keyword={{product.searchKeyword}}&bcid={{product.searchResultfoId}}&ssp=1" target="_blank" p4pclickable data-sentLog="daSou">相似</a>',
+        '                {{if product.searchResultfoBrand}}<a href="//s.hc360.com/cgi-bin/simsamepar?keyword={{product.searchKeyword}}&bcid={{product.searchResultfoId}}&ssp=2" target="_blank" p4pclickable data-sentLog="daSou">同款</a>{{/if}}',
         '                <a href="{{product.pretreatShopUrl}}" target="_blank" p4pclickable data-sentLog="daSou">店铺</a>',
         '            </div>',
         '        </div>',
@@ -862,7 +862,7 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         '                    <span class="seaNewPrice">{{#product.pretreatPrice}}</span>',
         '                </dt>',
         '                <dd class="newName">',
-        '                    <a href="http://b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title="{{product.searchResultfoTitle}}" p4pclickable data-sentLog="daSou">{{#product.pretreatTitle}}</a>',
+        '                    <a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title="{{product.searchResultfoTitle}}" p4pclickable data-sentLog="daSou">{{#product.pretreatTitle}}</a>',
         '                    <em class="searchad">广告</em>',
         '                </dd>',
         '                <dd class="newCname">',
@@ -870,9 +870,9 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         '                        <a href="{{product.pretreatShopUrl}}" target="_blank" title="{{product.searchResultfoCompany}}" p4pclickable data-sentLog="daSou">{{product.searchResultfoCompany}}</a>&nbsp;',
         '                    </p>',
         '                    <div class="newNameRight">',
-        '                        {{if product.searchResultfoMmtYearAge&&(product.searchResultfoMmtYearAge!=0)}}<a class="{{product.searchResultfoAsClass}}" title="{{product.searchResultfoAsName}}" target="_blank" href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html" p4pclickable data-sentLog="daSou">{{product.searchResultfoMmtYearAge}}年</a>{{/if}}',
-        '                        <a class="p4pIco" title="优质卖家" target="_blank" href="http://b2b.hc360.com/p4p/index.html">&nbsp;</a>',
-        '                        {{if product.searchResultfobw==1}}<a target="_blank" href="http://info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newBwIco"></a>{{/if}}',
+        '                        {{if product.searchResultfoMmtYearAge&&(product.searchResultfoMmtYearAge!=0)}}<a class="{{product.searchResultfoAsClass}}" title="{{product.searchResultfoAsName}}" target="_blank" href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html" p4pclickable data-sentLog="daSou">{{product.searchResultfoMmtYearAge}}年</a>{{/if}}',
+        '                        <a class="p4pIco" title="优质卖家" target="_blank" href="//b2b.hc360.com/p4p/index.html">&nbsp;</a>',
+        '                        {{if product.searchResultfobw==1}}<a target="_blank" href="//info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newBwIco"></a>{{/if}}',
         '                    </div>',
         '                </dd>',
         '                <dd class="newBotBox">',
@@ -880,12 +880,12 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         '                        <div class="areaBox">',
         '                            <span title="{{product.pretreatArea}}">{{product.pretreatArea}}</span>',
         '                        </div>',
-        '                        {{if product.searchResultfoauthInfo!=0}}<a class="newIco100" title="企业信息真实性已认证" target="_blank" href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html">&nbsp;</a>{{/if}}',
-        '                        {{if product.searchResultfoTrading==1}}<a class="newIco4" title="在线交易" target="_blank" href="http://b2b.hc360.com/mmtTrade/tran/hfb.html">&nbsp;</a>{{/if}}',
+        '                        {{if product.searchResultfoauthInfo!=0}}<a class="newIco100" title="企业信息真实性已认证" target="_blank" href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html">&nbsp;</a>{{/if}}',
+        '                        {{if product.searchResultfoTrading==1}}<a class="newIco4" title="在线交易" target="_blank" href="//b2b.hc360.com/mmtTrade/tran/hfb.html">&nbsp;</a>{{/if}}',
         '                    </div>',
         '                    <div class="nBotRight">',
         '                        <a title="在线咨询" class="newZXIco" onclick="onlineBox.online(&quot;{{product.searchResultfoCompany}}&quot;, &quot;{{product.searchResultfoProviderid}}&quot;); HC.UBA.sendUserlogsElement(&quot;supply_consult_p4p&quot;)"></a>',
-        '                        {{if product.searchResultfoQq}}<a class="newQQIco" title="QQ交谈" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin={{product.searchResultfoQq}}&amp;site=qq&amp;menu=yes" rel="nofollow" onclick="HC.UBA.sendUserlogsElement(&quot;supply_qq_p4p&quot;)">',
+        '                        {{if product.searchResultfoQq}}<a class="newQQIco" title="QQ交谈" target="_blank" href="//wpa.qq.com/msgrd?v=3&amp;uin={{product.searchResultfoQq}}&amp;site=qq&amp;menu=yes" rel="nofollow" onclick="HC.UBA.sendUserlogsElement(&quot;supply_qq_p4p&quot;)">',
         '                            <em class="qqonline">&nbsp;</em>',
         '                        </a>{{/if}}',
         '                    </div>',
@@ -906,7 +906,7 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
        */
       if (_lineDisplayProductNum > _num) {
         _tempHTMLArray.push('        <li class="grid-list">');
-        _tempHTMLArray.push('            <a href="http://b2b.hc360.com/p4p/index.html" target="_blank"><img src="http://style.org.hc360.com/search/images/seaAd.png" /></a>');
+        _tempHTMLArray.push('            <a href="//b2b.hc360.com/p4p/index.html" target="_blank"><img src="//style.org.hc360.com/search/images/seaAd.png" /></a>');
         _tempHTMLArray.push('        </li>');
       }
 
@@ -1481,8 +1481,8 @@ $(function () {
       '            </a>',
       '            <div class="{{if product.searchResultfoBrand}}similars{{else}}newImgAlert{{/if}}">',
       '                <span></span>',
-      '                <a href="http://s.hc360.com/cgi-bin/simsamepar?keyword={{product.searchKeyword}}&bcid={{product.searchResultfoId}}&ssp=1" target="_blank" p4pclickable data-sentLog="daSou">相似</a>',
-      '                {{if product.searchResultfoBrand}}<a href="http://s.hc360.com/cgi-bin/simsamepar?keyword={{product.searchKeyword}}&bcid={{product.searchResultfoId}}&ssp=2" target="_blank" p4pclickable data-sentLog="daSou">同款</a>{{/if}}',
+      '                <a href="//s.hc360.com/cgi-bin/simsamepar?keyword={{product.searchKeyword}}&bcid={{product.searchResultfoId}}&ssp=1" target="_blank" p4pclickable data-sentLog="daSou">相似</a>',
+      '                {{if product.searchResultfoBrand}}<a href="//s.hc360.com/cgi-bin/simsamepar?keyword={{product.searchKeyword}}&bcid={{product.searchResultfoId}}&ssp=2" target="_blank" p4pclickable data-sentLog="daSou">同款</a>{{/if}}',
       '                <a href="{{product.pretreatShopUrl}}" target="_blank" p4pclickable data-sentLog="daSou">店铺</a>',
       '            </div>',
       '        </div>',
@@ -1492,7 +1492,7 @@ $(function () {
       '                    <span class="seaNewPrice">{{#product.pretreatPrice}}</span>',
       '                </dt>',
       '                <dd class="newName">',
-      '                    <a href="http://b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title="{{product.searchResultfoTitle}}" p4pclickable data-sentLog="daSou">{{#product.pretreatTitle}}</a>',
+      '                    <a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title="{{product.searchResultfoTitle}}" p4pclickable data-sentLog="daSou">{{#product.pretreatTitle}}</a>',
       '                    <em class="searchad">广告</em>',
       '                </dd>',
       '                <dd class="newCname">',
@@ -1500,9 +1500,9 @@ $(function () {
       '                        <a href="{{product.pretreatShopUrl}}" target="_blank" title="{{product.searchResultfoCompany}}" p4pclickable data-sentLog="daSou">{{product.searchResultfoCompany}}</a>&nbsp;',
       '                    </p>',
       '                    <div class="newNameRight">',
-      '                        {{if product.searchResultfoMmtYearAge&&(product.searchResultfoMmtYearAge!=0)}}<a class="{{product.searchResultfoAsClass}}" title="{{product.searchResultfoAsName}}" target="_blank" href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html" p4pclickable data-sentLog="daSou">{{product.searchResultfoMmtYearAge}}年</a>{{/if}}',
-      '                        <a class="p4pIco" title="优质卖家" target="_blank" href="http://b2b.hc360.com/p4p/index.html">&nbsp;</a>',
-      '                        {{if product.searchResultfobw==1}}<a target="_blank" href="http://info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newBwIco"></a>{{/if}}',
+      '                        {{if product.searchResultfoMmtYearAge&&(product.searchResultfoMmtYearAge!=0)}}<a class="{{product.searchResultfoAsClass}}" title="{{product.searchResultfoAsName}}" target="_blank" href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html" p4pclickable data-sentLog="daSou">{{product.searchResultfoMmtYearAge}}年</a>{{/if}}',
+      '                        <a class="p4pIco" title="优质卖家" target="_blank" href="//b2b.hc360.com/p4p/index.html">&nbsp;</a>',
+      '                        {{if product.searchResultfobw==1}}<a target="_blank" href="//info.hc360.com/list/mvb.shtml" title="慧聪标王" class="newBwIco"></a>{{/if}}',
       '                    </div>',
       '                </dd>',
       '                <dd class="newBotBox">',
@@ -1510,12 +1510,12 @@ $(function () {
       '                        <div class="areaBox">',
       '                            <span title="{{product.pretreatArea}}">{{product.pretreatArea}}</span>',
       '                        </div>',
-      '                        {{if product.searchResultfoauthInfo!=0}}<a class="newIco100" title="企业信息真实性已认证" target="_blank" href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html">&nbsp;</a>{{/if}}',
-      '                        {{if product.searchResultfoTrading==1}}<a class="newIco4" title="在线交易" target="_blank" href="http://b2b.hc360.com/mmtTrade/tran/hfb.html">&nbsp;</a>{{/if}}',
+      '                        {{if product.searchResultfoauthInfo!=0}}<a class="newIco100" title="企业信息真实性已认证" target="_blank" href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html">&nbsp;</a>{{/if}}',
+      '                        {{if product.searchResultfoTrading==1}}<a class="newIco4" title="在线交易" target="_blank" href="//b2b.hc360.com/mmtTrade/tran/hfb.html">&nbsp;</a>{{/if}}',
       '                    </div>',
       '                    <div class="nBotRight">',
       '                        <a title="在线咨询" class="newZXIco" onclick="onlineBox.online(&quot;{{product.searchResultfoCompany}}&quot;, &quot;{{product.searchResultfoProviderid}}&quot;); HC.UBA.sendUserlogsElement(&quot;supply_consult_p4p&quot;)"></a>',
-      '                        {{if product.searchResultfoQq}}<a class="newQQIco" title="QQ交谈" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin={{product.searchResultfoQq}}&amp;site=qq&amp;menu=yes" rel="nofollow" onclick="HC.UBA.sendUserlogsElement(&quot;supply_qq_p4p&quot;)">',
+      '                        {{if product.searchResultfoQq}}<a class="newQQIco" title="QQ交谈" target="_blank" href="//wpa.qq.com/msgrd?v=3&amp;uin={{product.searchResultfoQq}}&amp;site=qq&amp;menu=yes" rel="nofollow" onclick="HC.UBA.sendUserlogsElement(&quot;supply_qq_p4p&quot;)">',
       '                            <em class="qqonline">&nbsp;</em>',
       '                        </a>{{/if}}',
       '                    </div>',
@@ -1873,7 +1873,7 @@ $(function () {
       '{{/if}}',
       '{{/each}}',
       '{{if product.searchResultfoCompany}}',
-      '<p><span>公司名称：</span><a href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/" target="_blank" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a></p>',
+      '<p><span>公司名称：</span><a href="//{{product.searchResultfoUserName}}.b2b.hc360.com/" target="_blank" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a></p>',
       '{{/if}}',
       '</div>',
       '</li>',
@@ -1891,7 +1891,7 @@ $(function () {
      *  重新拽一个p4p接口，参数是当前页面p4p的bcid以逗号拼接的字符串，返回当前p4p的商品的关键词和第二张商品图片
      */
     var businImgDeferre = $.ajax({
-      url: 'http://p4pdetail.hc360.com/p4pdetail/common/get/businImage.html',
+      url: '//p4pdetail.hc360.com/p4pdetail/common/get/businImage.html',
       method: 'get',
       data: {
         businId: bcIdStr.join(',')

@@ -61,7 +61,7 @@
     //          * [发送计费请求]
     //          */
     //         $.ajax({
-    //                 url: 'http://p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
+    //                 url: '//p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
     //                 data: {
     //                     bcid: _p4pbcid,
     //                     keyword: encodeURIComponent(_keyword)
@@ -83,7 +83,7 @@
     //                  * [_href 跳转页面地址]
     //                  * @type {String}
     //                  */
-    //                 var _href = 'http://js.hc360.com/supplyself/' + _p4pbcid + '.html';
+    //                 var _href = '//js.hc360.com/supplyself/' + _p4pbcid + '.html';
     //                 window.location.href = _href;
     //             });
     //     }
@@ -125,7 +125,7 @@
              * 调用张帆的接口，返回P4P数据
              */
             $.ajax({
-                url: 'http://wsdetail.b2b.hc360.com/getP4pResult',
+                url: '//wsdetail.b2b.hc360.com/getP4pResult',
                 dataType: 'jsonp',
                 data: {
                     bcid: bcId,
@@ -141,7 +141,7 @@
                      * [发送计费请求]
                      */
                     $.ajax({
-                        url: 'http://p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
+                        url: '//p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
                         data: {
                             bcid: _product.searchResultfoID,
                             keyword: _product.searchResultfoTp
@@ -163,7 +163,7 @@
                              * [_href 跳转页面地址]
                              * @type {String}
                              */
-                            var _href = 'http://js.hc360.com/supplyself/' + _product.searchResultfoID + '.html';
+                            var _href = '//js.hc360.com/supplyself/' + _product.searchResultfoID + '.html';
                             window.location.href = _href;
                         });
                 } else {
@@ -279,12 +279,12 @@
                 '{{each products as product i}}',
                 '<li data-index={{i}}>',
                 '    <div class="botImgBox">',
-                '        <a href="http://js.hc360.com/supplyself/{{product.searchResultfoId}}.html" data-sentLog="p4pDaTu">',
+                '        <a href="//js.hc360.com/supplyself/{{product.searchResultfoId}}.html" data-sentLog="p4pDaTu">',
                 '           <img src="{{product.searchResultfoImageSmall}}">',
                 '       </a>',
                 '    </div>',
                 '    <p class="botName">',
-                '       <a href="http://js.hc360.com/supplyself/{{product.searchResultfoId}}.html" data-sentLog="p4pDaTu">{{product.searchResultfoTitle}}</a>',
+                '       <a href="//js.hc360.com/supplyself/{{product.searchResultfoId}}.html" data-sentLog="p4pDaTu">{{product.searchResultfoTitle}}</a>',
                 '    </p>',
                 '    <p class="botPrice">{{#product.pretreatPrice}}</p>',
                 '</li>',

@@ -230,7 +230,7 @@ window.deffer.done(function (data) {
          * 如果缓存搜索数据，调用搜索接口
          */
         $.ajax({
-            url: "http://s.hc360.com/cgi-bin/getmmtlast.cgi",
+            url: "//s.hc360.com/cgi-bin/getmmtlast.cgi",
             method: 'get',
             data: {
                 w: _keyWord,

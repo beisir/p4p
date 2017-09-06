@@ -60,7 +60,7 @@ if ($.trim(window.jump_p4pBcid).length) {
          * [发送计费请求]
          */
         $.ajax({
-            url: 'http://p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
+            url: '//p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
             data: {
                 bcid: _p4pbcid,
                 keyword: encodeURIComponent(_keyword)
@@ -82,7 +82,7 @@ if ($.trim(window.jump_p4pBcid).length) {
                  * [_href 跳转页面地址]
                  * @type {String}
                  */
-                var _href = 'http://b2b.hc360.com/supplyself/' + _p4pbcid + '.html';
+                var _href = '//b2b.hc360.com/supplyself/' + _p4pbcid + '.html';
                 window.location.href = _href;
             });
     }

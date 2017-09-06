@@ -8,7 +8,7 @@ var p4pBusinessLogic = require('./p4p.base'),
      */
     keyWorddeffer = function () {
         return $.ajax({
-            url: 'http://p4pdetail.hc360.com/p4pdetail/common/get/titleCoreKeyword.html',
+            url: '//p4pdetail.hc360.com/p4pdetail/common/get/titleCoreKeyword.html',
             type: 'get',
             data: {
                 title:_title
@@ -38,7 +38,7 @@ var p4pBusinessLogic = require('./p4p.base'),
                 '<span class="pric">{{product.pretreatPrice}}</span>',
             '</dd>',
             '<dd class="thiDd">',
-                '<a href="http://{{product.searchResultfoUserName}}.b2b.hc360.com/" target="_blank" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a>',
+                '<a href="//{{product.searchResultfoUserName}}.b2b.hc360.com/" target="_blank" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a>',
             '</dd>',
         '</dl>',
         '{{/each}}'
@@ -167,7 +167,7 @@ if(_title){
              */
             _wrap.show();
 
-            _wrap.find('.sucTil a').attr('href','http://z.hc360.com/p4psearch/search.html?key='+result.keywordcode)
+            _wrap.find('.sucTil a').attr('href','//z.hc360.com/p4psearch/search.html?key='+result.keywordcode)
         });
 
         /**

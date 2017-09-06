@@ -129,7 +129,7 @@ Keyword.prototype = {
          */
         var _deferred_interface = $.Deferred();
         $.ajax({
-                url: 'http://champion.hc360.com/champion/p4p/getYesterdayClickTop.html',
+                url: '//champion.hc360.com/champion/p4p/getYesterdayClickTop.html',
                 dataType: 'jsonp'
             })
             .done(function(keywords) {
@@ -632,7 +632,7 @@ ScrollLoading.prototype = {
     sendHttpRequest: function(params) {
         var _this = this;
         return $.ajax($.extend(true, {
-            url: 'http://s.hc360.com/getmmtlast.cgi',
+            url: '//s.hc360.com/getmmtlast.cgi',
             data: {
                 w: '',
                 mc: 'seller',
@@ -820,7 +820,7 @@ $.when(keywordEntity.getKeywordList()).done(function(keywords) {
             '        </dd>',
             '    </dl>',
             '    <div class="proBoxAlert">',
-            '       <a href="http://s.hc360.com/?w={{product.keyword}}&mc=seller" title="发现更多的相似资源" target="_blank">',
+            '       <a href="//s.hc360.com/?w={{product.keyword}}&mc=seller" title="发现更多的相似资源" target="_blank">',
             '           <h3>相似资源</h3>',
             '           <p>发现更多的相似资源</p>',
             '       </a>',

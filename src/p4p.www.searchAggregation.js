@@ -33,7 +33,7 @@ var p4pBusinessLogic = require('./p4p.base'),
 window.hcclick = function (param) {
     if (document.images) {
         var rannumber = Math.round(Math.random() * 10000);
-        (new Image()).src = "http://log.info.hc360.com/click.htm" + param + "&rannumber=" + rannumber;
+        (new Image()).src = "//log.info.hc360.com/click.htm" + param + "&rannumber=" + rannumber;
     }
     return true;
 };
@@ -368,7 +368,7 @@ $(function () {
     /**
      * [加载顶部工具条]
      */
-    HC.HUB.addScript('http://style.org.hc360.com/js/build/source/widgets/flowconfig/hc.flowconfig.min.js', function () {
+    HC.HUB.addScript('//style.org.hc360.com/js/build/source/widgets/flowconfig/hc.flowconfig.min.js', function () {
         HC.W.load('topnav', function () {
             var topNavList = $('.webTopNav')[0];
             topnav.init(false);

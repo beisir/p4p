@@ -200,7 +200,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
             '{{ each products as product i }}',
             '<li data-p4p="{{i}}" bc-id="{{product.searchResultfoId}}">',
             '<dl>',
-            '<dt><a href="{{product.searchResultfoUrl}}" target="_blank" ><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}" onerror="this.src=\'http://style.org.hc360.com/images/detail/mysite/siteconfig/SY-shop/no-pic.png\';this.onerror=null;"></a></dt>',
+            '<dt><a href="{{product.searchResultfoUrl}}" target="_blank" ><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}" onerror="this.src=\'//style.org.hc360.com/images/detail/mysite/siteconfig/SY-shop/no-pic.png\';this.onerror=null;"></a></dt>',
             '<dd><a href="{{product.searchResultfoUrl}}" target="_blank" >{{product.searchResultfoTitle}}</a></dd>',
             '</dl>',
             '</li>',
@@ -214,7 +214,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
             '{{ each products as product i }}',
             '<li bc-id="{{product.searchResultfoId}}">',
             '<dl>',
-            '<dt><a href="{{product.searchResultfoUrl}}" target="_blank" ><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}" onerror="this.src=\'http://style.org.hc360.com/images/detail/mysite/siteconfig/SY-shop/no-pic.png\';this.onerror=null;"></a></dt>',
+            '<dt><a href="{{product.searchResultfoUrl}}" target="_blank" ><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}" onerror="this.src=\'//style.org.hc360.com/images/detail/mysite/siteconfig/SY-shop/no-pic.png\';this.onerror=null;"></a></dt>',
             '<dd><a href="{{product.searchResultfoUrl}}" target="_blank" >{{product.searchResultfoTitle}}</a></dd>',
             '</dl>',
             '</li>',
@@ -239,7 +239,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
          */
         p4pResult = (function () {
             return $.ajax({
-                url: 'http://s.hc360.com/getmmtlast.cgi',
+                url: '//s.hc360.com/getmmtlast.cgi',
                 data: {
                     source: 3,
                     w: _keyWord,
@@ -258,7 +258,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
          */
         searchResult = (function () {
             return $.ajax({
-                url: "http://s.hc360.com/getmmtlast.cgi",
+                url: "//s.hc360.com/getmmtlast.cgi",
                 dataType: 'jsonp',
                 jsonp: 'jsoncallback',
                 data: {
@@ -480,7 +480,7 @@ $("body").on('click', '#nextBtn', function () {
         /***
          * 跳转页面地址
          */
-        $(this).find('a').attr('href', 'http://b2b.hc360.com/viewPics/supplyself_pics/' + bcId + '.html#last='+window.supplyBcId);
+        $(this).find('a').attr('href', '//b2b.hc360.com/viewPics/supplyself_pics/' + bcId + '.html#last='+window.supplyBcId);
 
     } else {
         /***

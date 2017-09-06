@@ -201,7 +201,7 @@ function initRelated() {
             areaName: encodeURIComponent(window.areaName)
         },
 
-        likeMod = "http://detail.b2b.hc360.com/detail/turbine/action/ajax.SearchSupplyDetailAjaxAction/eventsubmit_doProdbysupply/doProdbysupply",
+        likeMod = "//detail.b2b.hc360.com/detail/turbine/action/ajax.SearchSupplyDetailAjaxAction/eventsubmit_doProdbysupply/doProdbysupply",
         /**
          * [userlogs ¼à²âµãÃû³Æ]
          * @type {String}

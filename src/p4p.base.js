@@ -41,7 +41,7 @@ function p4pBusinessLogic(options) {
              * @type {Object}
              */
             data: {
-                url: 'http://s.hc360.com/getmmtlast.cgi',
+                url: '//s.hc360.com/getmmtlast.cgi',
                 data: {
                     w: '',
                     mc: 'seller',
@@ -58,7 +58,7 @@ function p4pBusinessLogic(options) {
              * @type {Object}
              */
             click: {
-                url: 'http://p4pserver.org.hc360.com/p4pserver/doAnticheating',
+                url: '//p4pserver.org.hc360.com/p4pserver/doAnticheating',
                 data: {},
                 dataType: 'jsonp',
                 jsonp: 'jsoncallback',
@@ -314,7 +314,7 @@ p4pBusinessLogic.prototype.pretreatData = function() {
             _tempEntity.pretreatIconText = (_tempEntity.searchResultfoIsRecomHQ == 0) ? "推荐" : ((_tempEntity.searchResultfoIsRecomHQ == 1) ? "优质" : ""),
             _tempEntity.pretreatTitle = _tempEntity.searchResultfoTitle.replace(_tempRegExp, '<span>' + _this.keyword + '</span>'),
             _tempEntity.pretreatAttrs = analyzeAttr(_tempEntity.searchResultfoAttr || ''),
-            _tempEntity.pretreatShopUrl = 'http://' + _tempEntity.searchResultfoUserName + '.b2b.hc360.com',
+            _tempEntity.pretreatShopUrl = '//' + _tempEntity.searchResultfoUserName + '.b2b.hc360.com',
             _tempEntity.pretreatPrice = (parseFloat(_tempEntity.searchResultfoUnitPrice) === 0) ? '面议' : ('&yen;' + _tempEntity.searchResultfoUnitPrice + ' &frasl;' + _tempEntity.searchResultfoMeasureUnit),
             _tempEntity.pretreatIsTrade = (parseFloat(_tempEntity.searchResultfoUnitPrice) === 0) ? false : parseInt(_tempEntity.searchResultfoTrading),
             _tempEntity.pretreatMobilePhone = _tempEntity.searchResultfoTelephone ? searchResultfoTelephone : _tempEntity.searchResultfoML,
@@ -627,7 +627,7 @@ p4pBusinessLogic.prototype.sendExpoData = function(data) {
          */
         var _html = [
             '<div data-node-name="p4p-expo-form-wrap" style="display:none;">',
-            '   <form action="http://log.org.hc360.com/logrecordservice/logrecordp4pexposure" enctype="application/x-www-form-urlencoded" method="post" target="#ifamename#">',
+            '   <form action="//log.org.hc360.com/logrecordservice/logrecordp4pexposure" enctype="application/x-www-form-urlencoded" method="post" target="#ifamename#">',
             '       <input name="p4pexpolog" type="hidden">',
             '   </form>',
             '   <iframe name="#ifamename#"></iframe>',

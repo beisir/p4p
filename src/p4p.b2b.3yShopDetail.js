@@ -59,7 +59,7 @@ var p4pBusinessLogic = require('./p4p.base');
 //          * [发送计费请求]
 //          */
 //         $.ajax({
-//             url: 'http://p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
+//             url: '//p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
 //             data: {
 //                 bcid: _p4pbcid,
 //                 keyword: encodeURIComponent(_keyword)
@@ -81,7 +81,7 @@ var p4pBusinessLogic = require('./p4p.base');
 //                  * [_href 跳转页面地址]
 //                  * @type {String}
 //                  */
-//                 var _href = 'http://b2b.hc360.com/supplyself/' + _p4pbcid + '.html';
+//                 var _href = '//b2b.hc360.com/supplyself/' + _p4pbcid + '.html';
 //                 window.location.href = _href;
 //             });
 //     }
@@ -122,7 +122,7 @@ $(window).load(function () {
              * 调用张帆的接口，返回P4P数据
              */
             $.ajax({
-                url: 'http://wsdetail.b2b.hc360.com/getP4pResult',
+                url: '//wsdetail.b2b.hc360.com/getP4pResult',
                 dataType: 'jsonp',
                 data: {
                     bcid: bcId,
@@ -138,7 +138,7 @@ $(window).load(function () {
                      * [发送计费请求]
                      */
                     $.ajax({
-                        url: 'http://p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
+                        url: '//p4pserver.org.hc360.com/p4pserver/doAnticheatingSpe',
                         data: {
                             bcid: _product.searchResultfoID,
                             keyword: _product.searchResultfoTp
@@ -160,7 +160,7 @@ $(window).load(function () {
                              * [_href 跳转页面地址]
                              * @type {String}
                              */
-                            var _href = 'http://b2b.hc360.com/supplyself/' + _product.searchResultfoID + '.html';
+                            var _href = '//b2b.hc360.com/supplyself/' + _product.searchResultfoID + '.html';
                             window.location.href = _href;
                         });
                 } else {
@@ -364,11 +364,11 @@ p4pAdvertising.addEventListener('onDataReady', function (data) {
         _tempHTMLArray = [
             '{{each products as product i}}',
             '<li>',
-            '<a href="http://b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank">',
+            '<a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank">',
             '<img src="{{product.searchResultfoImageBig}}" height="200" width="200" alt="{{product.searchResultfoTitle}}">',
             '</a>',
             '<div class="A-title">',
-            '<a href="http://b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank">{{product.searchResultfoTitle}}</a>',
+            '<a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank">{{product.searchResultfoTitle}}</a>',
             '<span>广告</span>',
             '</div>',
             '<div class="price red">{{product.pretreatPrice}}</div>',

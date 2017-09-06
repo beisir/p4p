@@ -7,7 +7,7 @@ var cookieUtil = require('./cookie');
 /**
  * [加载顶部工具条]
  */
-HC.HUB.addScript('http://style.org.hc360.com/js/build/source/widgets/flowconfig/hc.flowconfig.min.js', function() {
+HC.HUB.addScript('//style.org.hc360.com/js/build/source/widgets/flowconfig/hc.flowconfig.min.js', function() {
 	HC.W.load('topnav', function() {
 		var topNavList = $('.webTopNav')[0];
 		topnav.init(false);
@@ -55,7 +55,7 @@ window.resizeImg = function(img, oAW, oAH) {
  * @return {[type]}     [description]
  */
 window.imgonerror = function(img) {
-	img.src = "http://style.org.hc360.com/images/detail/mysite/siteconfig/SY-shop/no-pic.png";
+	img.src = "//style.org.hc360.com/images/detail/mysite/siteconfig/SY-shop/no-pic.png";
 	img.onerror = null;
 };
 
@@ -65,7 +65,7 @@ window.imgonerror = function(img) {
 window.hcclick = function(param) {
 	if (document.images) {
 		var rannumber = Math.round(Math.random() * 10000);
-		(new Image()).src = "http://log.info.hc360.com/click.htm" + param + "&rannumber=" + rannumber;
+		(new Image()).src = "//log.info.hc360.com/click.htm" + param + "&rannumber=" + rannumber;
 	}
 	return true;
 };
@@ -74,7 +74,7 @@ window.hcclick = function(param) {
  * [loginDialogDeferred 加载登录框脚本延迟对象]
  */
 var loginDialogDeferred = $.Deferred();
-HC.HUB.addScript("http://style.org.hc360.cn/js/module/detail/hc.login.pop.min.js", function() {
+HC.HUB.addScript("//style.org.hc360.cn/js/module/detail/hc.login.pop.min.js", function() {
 	loginDialogDeferred.resolve();
 });
 
@@ -83,7 +83,7 @@ HC.HUB.addScript("http://style.org.hc360.cn/js/module/detail/hc.login.pop.min.js
  * @return {[type]} [description]
  */
 function toAjaxshoucang() {
-	var url = "http://my.b2b.hc360.com/my/turbine/action/favorites.FavoritesAction/eventsubmit_doAddinfonew/doAddinfonew?";
+	var url = "//my.b2b.hc360.com/my/turbine/action/favorites.FavoritesAction/eventsubmit_doAddinfonew/doAddinfonew?";
 	url = url + "infoid=" + window.supplyBcId + "&infotype=0&buyerSourceId=" + window.buyerSourceIdStr;
 	jQuery.ajax({
 		type: "get",
@@ -94,7 +94,7 @@ function toAjaxshoucang() {
 		contentType: "application/x-www-form-urlencoded;charset=utf-8",
 		timeout: 3000,
 		success: function(result) {
-			jQuery("._urlid").attr("href", "http://my.b2b.hc360.com/my/turbine/template/corcenter,favorites,favorites.html");
+			jQuery("._urlid").attr("href", "//my.b2b.hc360.com/my/turbine/template/corcenter,favorites,favorites.html");
 			var top = jQuery(document).scrollTop();
 			jQuery('#update-shoucang').css('margin-top', top);
 			if (result.code == '007') {
@@ -136,7 +136,7 @@ function toAjaxshoucang() {
  */
 function Favorite_purchase(isbusin) {
 	var data = inquiryParamVO;
-	var url = "http://detail.b2b.hc360.com/detail/turbine/action/ajax.Favorite_PurchaseAction/eventsubmit_doFavorite/doFavorite?";
+	var url = "//detail.b2b.hc360.com/detail/turbine/action/ajax.Favorite_PurchaseAction/eventsubmit_doFavorite/doFavorite?";
 	jQuery.ajax({
 		type: "get",
 		url: url,
@@ -145,7 +145,7 @@ function Favorite_purchase(isbusin) {
 		jsonp: "jsoncallback",
 		timeout: 3000,
 		success: function(result) {
-			url = "http://my.b2b.hc360.com/my/turbine/action/favorites.Favorite_PurchaseAction/eventsubmit_doPerform/doPerform?";
+			url = "//my.b2b.hc360.com/my/turbine/action/favorites.Favorite_PurchaseAction/eventsubmit_doPerform/doPerform?";
 			result.contact = encodeURIComponent(window.companyContactor);
 			result.CompanyName = encodeURIComponent(window.infoname);
 			result.comeUrl = window.location.href;
@@ -335,7 +335,7 @@ $(function() {
 			'        </p>',
 			'        <p class="price">',
 			'            <span>{{product.pretreatPrice}}</span>',
-			'            {{if product.searchResultfoQq}}<a href="http://wpa.qq.com/msgrd?v=3&amp;uin={{product.searchResultfoQq}}&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" title="QQ交谈"><em class="qqonline">&nbsp;</em></a>{{/if}}',
+			'            {{if product.searchResultfoQq}}<a href="//wpa.qq.com/msgrd?v=3&amp;uin={{product.searchResultfoQq}}&amp;site=qq&amp;menu=yes" rel="nofollow" target="_blank" title="QQ交谈"><em class="qqonline">&nbsp;</em></a>{{/if}}',
 			'        </p>',
 			'        <dl>',
 			'            <dd class="state">',

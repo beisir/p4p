@@ -71,10 +71,10 @@ p4pMicroportal.addEventListener('onDataReady',function (data) {
          _li=[
              '<li data-index="{{i}}">',
              '<div class="picmid">',
-             '<a href="http://b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}" target="_blank">',
+             '<a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}" target="_blank">',
              '<img alt="{{product.searchResultfoTitle}}" src="{{product.searchResultfoImageBig}}" class="lazy" /></a>',
              '</div>',
-             '<p><a title="{{product.searchResultfoTitle}}" href="http://b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank">{{product.searchResultfoTitle}}</a></p>',
+             '<p><a title="{{product.searchResultfoTitle}}" href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank">{{product.searchResultfoTitle}}</a></p>',
              '</li>',
          ],
          /***
@@ -84,9 +84,9 @@ p4pMicroportal.addEventListener('onDataReady',function (data) {
           */
          _firstLi=[
              '<li class="frist">',
-                 '<p class="p4pimg"><a href="http://b2b.hc360.com/p4p/index.html" target="_blank"><img src="http://style.org.hc360.com/images/detail/miniportal/portal3/p4pImg.png" /></a></p>',
-                 '<p class="p1"><a href="http://b2b.hc360.com/p4p/index.html" target="_blank">抢占流量，时不我待！</a></p>',
-                 '<p class="p2"><a href="http://b2b.hc360.com/p4p/index.html" target="_blank">慧聪网首次开放搜索竞价服务<br />让您推广所花的每一分钱都有价值</a></p>',
+                 '<p class="p4pimg"><a href="//b2b.hc360.com/p4p/index.html" target="_blank"><img src="//style.org.hc360.com/images/detail/miniportal/portal3/p4pImg.png" /></a></p>',
+                 '<p class="p1"><a href="//b2b.hc360.com/p4p/index.html" target="_blank">抢占流量，时不我待！</a></p>',
+                 '<p class="p2"><a href="//b2b.hc360.com/p4p/index.html" target="_blank">慧聪网首次开放搜索竞价服务<br />让您推广所花的每一分钱都有价值</a></p>',
              '</li>'
          ]
 

@@ -215,7 +215,7 @@ p4pBusinessLogicEntity.init();
 
 
 /**
- * [p4pBusinessLogicEntity 实例化顶部p4p对象实例]
+ * [p4pBusinesstopEntity 实例化顶部切换产品热搜词p4p对象实例]
  * @type {p4pBusinessLogic}
  */
 var p4pBusinesstopEntity = new p4pBusinessLogic({
@@ -230,7 +230,7 @@ var p4pBusinesstopEntity = new p4pBusinessLogic({
    * [referrer 来源]
    * @type {Number}
    */
-  referrer: 59,
+  referrer: 60,
 
   /**
    * [clickableElementSelector 点击计费元素选择器]
@@ -318,8 +318,59 @@ p4pBusinesstopEntity.addEventListener('onDataReady', function (data) {
 });
 
 
-/**
- * 开始P4P业务对象初始化
+/***
+ * [p4pBusinesstopEntity 实例化顶部从百度进来页面的P4P对象]
  */
+var p4pBusinessformBaidu = new p4pBusinessLogic({
 
-p4pBusinesstopEntity.init();
+  /**
+   * [keyword 关键字]
+   * @type {Object}
+   */
+  keyword: (window.p4pkeyword || ""),
+
+  /**
+   * [referrer 来源]
+   * @type {Number}
+   */
+  referrer: 42,
+
+  /**
+   * [wrap 广告位包裹元素]
+   * @type {Object}
+   */
+  wrap: $("[node-name='p4pTopBox']"),
+
+  /**
+   * [template 渲染模板HTML，该属性为空字符串时，将不自动渲染，适用于由后台渲染的业务逻辑]
+   * @type {String}
+   */
+  template: '',
+
+
+  /**
+   * [cache 设置缓存数据，初始化该属性后，将不自动从搜索CGI接口获取数据，适用于由后台获取数据的业务逻辑]
+   * @type {[type]}
+   */
+  cache: {searchResultInfo: window.goodlist} || {},
+
+  /**
+   * [getClickElementCacheIndexCallback 根据被点击元素获取被点击元素对应的数据在数据缓存中的索引值]
+   * @param  {Object} element [被点击元素]
+   * @return {Number}         [数据缓存中的索引值]
+   */
+  getClickElementCacheIndexCallback: function (element) {
+    return element.closest('div.p4pListCon').index();
+  }
+});
+
+
+/**
+ * 如果是切换产品热搜词，初始化P4P业务点击扣费和曝光，referr是60，如果是从百度进入页面，刘涵扣费，referr是42，前段发曝光是42
+ */
+if(window.datap4p == 'true'){
+  p4pBusinesstopEntity.init();
+}else if(window.datap4p == 'false'){
+  p4pBusinessformBaidu.init();
+}
+

@@ -58,13 +58,14 @@ $(function() {
 					'			<dl>',
 					'				<dd class="prList1">&yen;<b>{{product.searchResultfoUnitPrice}}</b><em>/{{product.searchResultfoMeasureUnit}}</em>',
 					'				</dd>',
-					'				<dd class="prList2"><a href="//js.hc360.com/b2b/{{product.searchResultfoUserName}}/" title="{{product.searchResultfoCompany}}" onclick="sendUserlogsElement(&quot;UserBehavior_p4p_js_search_2_tupian&quot;);">{{product.searchResultfoCompany}}</a><span>广告</span>',
+					'				<dd class="prList2"><a href="//js.hc360.com/b2b/{{product.searchResultfoUserName}}/" title="{{product.searchResultfoCompany}}" onclick="sendUserlogsElement(&quot;UserBehavior_p4p_js_search_2_tupian&quot;);">{{product.searchResultfoCompany}}</a>',
 					'				</dd>',
 					'				</dd>',
 					'			</dl>',
 					'		</div>',
 					'		<a class="ImgBoxXJ" rel="nofollow" href="//js.hc360.com/supplyself/{{product.searchResultfoId}}.html?flag=1" onclick="sendUserlogsElement(&quot;UserBehavior_p4p_js_search_2_tupian&quot;);">询底价</a>',
 					'	</div>',
+					'<span>广告</span>',
 					'</li>',
 					'{{/each}}'
 				];
@@ -93,13 +94,14 @@ $(function() {
 					'			<dl>',
 					'				<dd class="prList1">&yen;<b>{{(product.bcprice.split("/")[0] || "")}}</b>/{{(product.bcprice.split("/")[1] || "")}}',
 					'				</dd>',
-					'				<dd class="prList2"><a href="//js.hc360.com/b2b/{{product.bcid}}/" target="_blank" title="{{product.shopname}}" >{{product.shopname}}</a><span>广告</span>',
+					'				<dd class="prList2"><a href="//js.hc360.com/b2b/{{product.bcid}}/" target="_blank" title="{{product.shopname}}" >{{product.shopname}}</a>',
 					'				</dd>',
 					'				</dd>',
 					'			</dl>',
 					'		</div>',
 					'		<a class="ImgBoxXJ" rel="nofollow" href="javascript:void(0)" onclick="sendUserlogsElement(&quot;UserBehavior_js_searchsupply_inquiry_wxbw?detailuserid={{product.username}}&detailbcid={{product.bcid}}&quot;);window.open(&quot;//js.hc360.com/supplyself/{{product.bcid}}.html?flag=1&quot;)">询底价</a>',
 					'	</div>',
+					'<span>广告</span>',
 					'</li>',
 					'{{/each}}'
 				];
@@ -170,7 +172,13 @@ $(function() {
 		 * @param  {Object} targetHTML [广告位元素]
 		 */
 		targetRenderCallback: function(targetHTML) {
-			return $(targetHTML).prependTo(this.wrap);
+      //return $(targetHTML).appendTo(this.wrap);
+      var p4pWrap=$(this.wrap).find('[node-name="jsiteP4pDom"]'),
+          _li=$(targetHTML);
+      for(var i=0;i<p4pWrap.length;i++){
+         $(_li[i]).appendTo(p4pWrap[i]);
+      }
+		 	return _li;
 		},
 
 		/**
@@ -204,30 +212,28 @@ $(function() {
 	 * [监听数据就绪事件]
 	 */
 	p4pBusinessLogicEntity.addEventListener('onDataReady', function(data) {
-		var _this = this,
+    var /**
+         * [_data P4P数据对象]
+         * @type {Object}
+         */
+        _data = data || {},
 
-			/**
-			 * [_data P4P数据对象]
-			 * @type {Object}
-			 */
-			_data = data || {},
+        /**
+         * [_prolist P4P商品数据列表]
+         * @type {Array}
+         */
+        _prolist = _data.searchResultInfo || [],
 
-			/**
-			 * [_prolist P4P商品数据列表]
-			 * @type {Array}
-			 */
-			_prolist = _data.searchResultInfo || [],
+        /**
+         * [_limit 展示P4P广告位数量上限]
+         * @type {Number}
+         */
+        _limit = 12;
 
-			/**
-			 * [_limit 展示P4P广告位数量上限]
-			 * @type {Number}
-			 */
-			_limit = 5;
-
-		/**
-		 * 根据展示P4P广告位数量上限截取数据
-		 */
-		_prolist.splice(_limit, _prolist.length);
+      /**
+       * 根据展示P4P广告位数量上限截取数据
+       */
+      _prolist.splice(_limit, _prolist.length);
 	});
 
 	/**

@@ -621,13 +621,18 @@ p4pBusinessLogic.prototype.sendExpoData = function(data) {
    */
   if (!_this.expo) {
 
+    /***
+     * 根据协议修改P4P曝光域名
+     * @type {string}
+     */
+    var logrecordservicedomain = (location.protocol == "https:") ? '//logrecords.hc360.com' : '//log.org.hc360.com';
     /**
      * [拼接曝光表单元素HTML]
      * @type {String}
      */
-    var _html = [
+     _html = [
       '<div data-node-name="p4p-expo-form-wrap" style="display:none;">',
-      '   <form action="//log.org.hc360.com/logrecordservice/logrecordp4pexposure" enctype="application/x-www-form-urlencoded" method="post" target="#ifamename#">',
+      '   <form action="'+logrecordservicedomain+'/logrecordservice/logrecordp4pexposure" enctype="application/x-www-form-urlencoded" method="post" target="#ifamename#">',
       '       <input name="p4pexpolog" type="hidden">',
       '   </form>',
       '   <iframe name="#ifamename#"></iframe>',

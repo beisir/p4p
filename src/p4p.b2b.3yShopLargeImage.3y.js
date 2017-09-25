@@ -277,7 +277,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
             searchData = $.extend(true, {}, searchObject[0]),
             p4pProduct = p4pData.searchResultInfo,
             searchProduct = searchData.searchResultInfo,
-            limit = 4;
+            limit = 3;
         /***
          * 截取上限
          */

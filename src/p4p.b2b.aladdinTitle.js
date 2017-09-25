@@ -24,7 +24,7 @@ var p4pBusinessLogic = require('./p4p.base'),
     '{{/if}}',
     '</div>',
     '{{if (product.searchResultfoQq!="") }}',
-    '<div class="nBotRight"><a class="newQQIco" href="//wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" title="QQ交谈" ><em class="qqonline">&nbsp;</em></a></div>',
+    '<div class="nBotRight"><a class="newQQIco" href="http://wpa.qq.com/msgrd?v=3&uin={{product.searchResultfoQq}}&site=qq&menu=yes" title="QQ交谈" ><em class="qqonline">&nbsp;</em></a></div>',
     '{{/if}}',
     '</dd>',
     '</dl>',
@@ -51,7 +51,7 @@ function ConversionPrice(price) {
   return price.toFixed(2) + (shiftUnit.unit || "")
 }
 /***
- * 调用自然搜索结果页
+ * 调用自然搜索结果页，渲染商品列表左侧商机
  */
 $.ajax({
   url: '//s.hc360.com/getmmtlast.cgi',
@@ -365,12 +365,68 @@ var p4pBusinessformBaidu = new p4pBusinessLogic({
 });
 
 
+/***
+ * [p4pBusinesstopEntity 实例化顶部从百度进来页面的P4P对象]
+ */
+var p4pBusinessformSouGou = new p4pBusinessLogic({
+
+  /**
+   * [keyword 关键字]
+   * @type {Object}
+   */
+  keyword: (window.p4pkeyword || ""),
+
+  /**
+   * [referrer 来源]
+   * @type {Number}
+   */
+  referrer: 62,
+
+  /**
+   * [wrap 广告位包裹元素]
+   * @type {Object}
+   */
+  wrap: $("[node-name='p4pTopBox']"),
+
+  /**
+   * [template 渲染模板HTML，该属性为空字符串时，将不自动渲染，适用于由后台渲染的业务逻辑]
+   * @type {String}
+   */
+  template: '',
+
+
+  /**
+   * [cache 设置缓存数据，初始化该属性后，将不自动从搜索CGI接口获取数据，适用于由后台获取数据的业务逻辑]
+   * @type {[type]}
+   */
+  cache: {searchResultInfo: window.goodlist} || {},
+
+  /**
+   * [getClickElementCacheIndexCallback 根据被点击元素获取被点击元素对应的数据在数据缓存中的索引值]
+   * @param  {Object} element [被点击元素]
+   * @return {Number}         [数据缓存中的索引值]
+   */
+  getClickElementCacheIndexCallback: function (element) {
+    return element.closest('div.p4pListCon').index();
+  }
+});
+
 /**
- * 如果是切换产品热搜词，初始化P4P业务点击扣费和曝光，referr是60，如果是从百度进入页面，刘涵扣费，referr是42，前段发曝光是42
+ * 如果是切换产品热搜词，初始化P4P业务点击扣费和曝光，referr是60，
+ * 如果是从百度进入页面，刘涵扣费，referr是42，前段发曝光是42
+ * 如果是搜狗进来，刘涵扣费，referr是62， 前端加62曝光
  */
 if(window.datap4p == 'true'){
+  //切换产品热搜词
   p4pBusinesstopEntity.init();
 }else if(window.datap4p == 'false'){
-  p4pBusinessformBaidu.init();
+    if(window.isSouGou=='true'){
+      //搜狗来源
+      p4pBusinessformSouGou.init();
+    }else {
+      //百度来源
+      p4pBusinessformBaidu.init();
+    }
+
 }
 

@@ -78,6 +78,7 @@ if(_title){
     var deffer=keyWorddeffer();
     deffer.done(function (result) {
         p4pBusinessLogicEntity = new p4pBusinessLogic({
+            params_p4p:{ sys: 'other',bus:'p4p_sem' },
             /**
              * [wrap 广告位包裹元素]
              * @type {Object}
@@ -195,6 +196,7 @@ $.when(p4pDeff).done(function (data,_keyword) {
     data.searchResultInfo.splice(5,data.searchResultInfo.length);
 
    var bottomP4pEntity = new p4pBusinessLogic({
+       params_p4p:{ sys: 'other',bus:'p4p_sem' },
         /**
          * [wrap 广告位包裹元素]
          * @type {Object}

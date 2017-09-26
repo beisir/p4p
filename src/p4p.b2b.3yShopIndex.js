@@ -9,7 +9,7 @@ var p4pBusinessLogic = require('./p4p.base');
  * @type {p4pBusinessLogic}
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+	params_p4p:{ sys: 'detail3y',bus:'p4p' },
 	/**
 	 * [keyword 关键字]
 	 * @type {Object}
@@ -172,7 +172,7 @@ $(function() {
 		 * @type {p4pBusinessLogic}
 		 */
 		var homeRelatedModP4PBusinessLogicEntity = new p4pBusinessLogic({
-
+			params_p4p:{ sys: 'detail3y',bus:'p4p' },
 			/**
 			 * [keyword 关键字]
 			 * @type {Object}

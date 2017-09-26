@@ -179,7 +179,7 @@ $(window).load(function () {
  * @type {p4pBusinessLogic}
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+    params_p4p:{ sys: 'detail3y',bus:'p4p' },
     /**
      * [keyword 关键字]
      * @type {Object}
@@ -309,6 +309,7 @@ p4pBusinessLogicEntity.init();
  * 实例化右侧p4p广告位
  */
 var p4pAdvertising = new p4pBusinessLogic({
+    params_p4p:{ sys: 'detail3y',bus:'p4p' },
     /**
      * [keyword 关键字]
      * @type {Object}

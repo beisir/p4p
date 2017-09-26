@@ -794,7 +794,7 @@ $.when(keywordEntity.getKeywordList()).done(function(keywords) {
      * @type {p4pBusinessLogic}
      */
     var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+        params_p4p:{ sys: 'home',bus:'p4p' },
         /**
          * [keyword 关键字]
          * @type {Object}

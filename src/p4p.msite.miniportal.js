@@ -14,7 +14,7 @@ $(function() {
 	 * @type {p4pBusinessLogic}
 	 */
 	var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+		params_p4p:{ sys: 'miniportal',bus:'p4p_m' },
 		/**
 		 * [keyword 关键字]
 		 * @type {Object}

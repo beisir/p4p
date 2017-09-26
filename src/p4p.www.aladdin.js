@@ -15,7 +15,7 @@ var deferredSliderData = $.Deferred();
  * @type {p4pBusinessLogic}
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+	params_p4p:{ sys: 'aladdin',bus:'p4p' },
 	/**
 	 * [keyword 关键字]
 	 * @type {Object}
@@ -374,7 +374,7 @@ $.when(deferredSliderData).done(function(data) {
 	 * @type {p4pBusinessLogic}
 	 */
 	var sliderP4PBusinessLogicEntity = new p4pBusinessLogic({
-
+		params_p4p:{ sys: 'aladdin',bus:'p4p' },
 		/**
 		 * [keyword 关键字]
 		 * @type {Object}

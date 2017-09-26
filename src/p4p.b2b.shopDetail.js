@@ -95,7 +95,7 @@ if ($.trim(window.jump_p4pBcid).length) {
  * @type {p4pBusinessLogic}
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+	params_p4p:{ sys: 'detail',bus:'p4pFreeRelatedList' },
 	/**
 	 * [keyword 关键字]
 	 * @type {Object}

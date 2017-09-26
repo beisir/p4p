@@ -17,7 +17,7 @@ var p4pBusinessLogic = require('./p4p.base');
  */
 $(function () {
     var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+        params_p4p:{ sys: 'js',bus:'p4p_pictxt' },
         /**
          * [keyword ¹Ø¼ü×Ö]
          * @type {Object}

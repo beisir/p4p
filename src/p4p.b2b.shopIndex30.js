@@ -12,13 +12,13 @@ var p4pBusinessLogic = require('./p4p.base');
  * @type {p4pBusinessLogic}
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+    params_p4p:{ sys: 'detail',bus:'p4pForHomepage' },
     /**
      * [keyword 关键字]
      * @type {Object}
      */
     keyword: (window.searchVal || $('title:eq(0)').text() || ""),
-
+    
     /**
      * [referrer 来源]
      * @type {Number}
@@ -353,7 +353,7 @@ $.when(homeRelatedModDataDeferred).done(function (data) {
      * @type {p4pBusinessLogic}
      */
     var homeRelatedModP4PBusinessLogicEntity = new p4pBusinessLogic({
-
+        params_p4p:{ sys: 'detail',bus:'p4pForHomepage' },
         /**
          * [keyword 关键字]
          * @type {Object}

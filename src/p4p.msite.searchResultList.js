@@ -183,7 +183,7 @@ $(function () {
          * @type {p4pBusinessLogic}
          */
         var p4pHorizontallyEntity = new p4pBusinessLogic({
-
+            params_p4p:{ sys: 'msite',bus:'p4p' },
             /**
              * [keyword 关键字]
              * @type {Object}
@@ -433,7 +433,7 @@ $(function () {
          * @type {p4pBusinessLogic}
          */
         var p4pVerticalEntity = new p4pBusinessLogic({
-
+            params_p4p:{ sys: 'msite',bus:'p4p' },
             /**
              * [keyword 关键字]
              * @type {Object}

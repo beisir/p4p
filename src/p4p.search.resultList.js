@@ -566,7 +566,7 @@ window.showProductDetail = function (element, data, callback) {
  * @type {p4pBusinessLogic}
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+  params_p4p:{ sys: 'seach',bus:'p4p' },
   /**
    * [keyword 关键字]
    * @type {Object}
@@ -1263,7 +1263,7 @@ $(function () {
      * @type {p4pBusinessLogic}
      */
     var huangzhanP4PBusinessLogicEntity = new p4pBusinessLogic({
-
+      params_p4p:{ sys: 'seach',bus:'p4p' },
       /**
        * [keyword 关键字]
        * @type {Object}
@@ -1536,7 +1536,7 @@ $(function () {
      * @type {p4pBusinessLogic}
      */
     var bottomP4PBusinessLogicEntity = new p4pBusinessLogic({
-
+      params_p4p:{ sys: 'seach',bus:'p4p' },
       /**
        * [keyword 关键字]
        * @type {Object}
@@ -1923,6 +1923,7 @@ $(function () {
       _data.searchResultInfo = p4pPro;
 
       var searchTopP4pEntity = new p4pBusinessLogic({
+        params_p4p:{ sys: 'seach',bus:'p4p' },
         /**
          * [keyword 关键字]
          * @type {Object}
@@ -2168,6 +2169,7 @@ window.search_recommend_callback = function () {
     ];
 
     var recommendedP4pEntity = new p4pBusinessLogic({
+      params_p4p:{ sys: 'seach',bus:'p4p' },
       /**
        * [keyword 关键字]
        * @type {Object}

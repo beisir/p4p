@@ -14,7 +14,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
      * @type {p4pBusinessLogic}
      */
     var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+        params_p4p:{ sys: 'detail',bus:'p4pFreeRelatedListForPicView' },
         /**
          * [keyword 关键字]
          * @type {Object}
@@ -197,6 +197,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
      * 初始化页面上的后台初始化的P4P扣费请求
      */
     var staticP4pEntity = new p4pBusinessLogic({
+        params_p4p:{ sys: 'detail',bus:'p4pFreeRelatedListForPicView' },
         /**
          * [keyword 关键字]
          * @type {Object}
@@ -367,6 +368,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
 
 
         var p4pBusinessNextBtn=new p4pBusinessLogic({
+            params_p4p:{ sys: 'detail',bus:'p4pFreeRelatedListForPicView' },
             /***
              * 关键词
              */

@@ -15,7 +15,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
      * @type {p4pBusinessLogic}
      */
     var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+        params_p4p:{ sys: 'detail',bus:'p4p' },
         /**
          * [keyword 关键字]
          * @type {Object}
@@ -299,6 +299,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
          * 初始化P4P实例对象
          */
         var p4pBusinessImagListEntity = new p4pBusinessLogic({
+            params_p4p:{ sys: 'detail',bus:'p4p' },
             /***
              * 关键词
              */
@@ -404,6 +405,7 @@ if ((!window.ismmt) || (Number(window.is3y) == 1)) {
              * 下一件商品点击扣费
              */
             var p4pBusinessNextBtn = new p4pBusinessLogic({
+                params_p4p:{ sys: 'detail',bus:'p4p' },
                 /***
                  * 关键词
                  */

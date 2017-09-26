@@ -110,7 +110,7 @@ $.ajax({
  * @type {p4pBusinessLogic}
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+  params_p4p:{ sys: 'aladdin',bus:'p4p_title' },
   /**
    * [keyword 关键字]
    * @type {Object}
@@ -219,7 +219,7 @@ p4pBusinessLogicEntity.init();
  * @type {p4pBusinessLogic}
  */
 var p4pBusinesstopEntity = new p4pBusinessLogic({
-
+  params_p4p:{ sys: 'aladdin',bus:'p4p_title' },
   /**
    * [keyword 关键字]
    * @type {Object}
@@ -322,7 +322,7 @@ p4pBusinesstopEntity.addEventListener('onDataReady', function (data) {
  * [p4pBusinesstopEntity 实例化顶部从百度进来页面的P4P对象]
  */
 var p4pBusinessformBaidu = new p4pBusinessLogic({
-
+  params_p4p:{ sys: 'aladdin',bus:'p4p_title' },
   /**
    * [keyword 关键字]
    * @type {Object}
@@ -369,7 +369,7 @@ var p4pBusinessformBaidu = new p4pBusinessLogic({
  * [p4pBusinesstopEntity 实例化顶部从百度进来页面的P4P对象]
  */
 var p4pBusinessformSouGou = new p4pBusinessLogic({
-
+  params_p4p:{ sys: 'aladdin',bus:'p4p_title' },
   /**
    * [keyword 关键字]
    * @type {Object}

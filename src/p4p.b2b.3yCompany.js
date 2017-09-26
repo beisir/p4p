@@ -19,6 +19,7 @@ var templateEntity = [
     ];
 
 var  P4PBusinessLogincEntity = new p4pBusinessLogic({
+        params_p4p:{ sys: 'detail3y',bus:'p4p_contactus' },
         /**
          * [keyword ¹Ø¼ü×Ö]
          * @type {Object}

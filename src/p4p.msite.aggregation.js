@@ -134,7 +134,7 @@ var _ua = require('./ua').parseUA(window.navigator.userAgent),
  * @type {p4pBusinessLogic}
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+    params_p4p:{ sys: 'msite',bus:'p4p_set' },
     /***
      * 外层包裹元素
      */
@@ -386,7 +386,7 @@ $.when(deferredData).done(function (data) {
     p4plistData.searchResultInfo = highQualityArr.slice(0);
     sliderP4PData.searchResultInfo = recommendedArr.slice(0,5);
     var p4pListProduct = new p4pBusinessLogic({
-
+        params_p4p:{ sys: 'msite',bus:'p4p_set' },
         /***
          * 外层包裹元素
          */
@@ -534,7 +534,7 @@ $.when(deferredData).done(function (data) {
      */
 
     var p4pSilderProduct = new p4pBusinessLogic({
-
+        params_p4p:{ sys: 'msite',bus:'p4p_set' },
         /***
          * 外层包裹元素
          */

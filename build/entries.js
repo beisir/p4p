@@ -208,5 +208,11 @@ module.exports = {
     "url": "//www.hc360.com/aladdinTitle/",
     "filename": "html/p4p.b2b.aladdinTitle.html",
     "template": "html/p4p.b2b.aladdinTitle.html"
+  },
+  "p4p.msite.graphicDetail": {
+    "desc": "M站详情页",
+    "url": "",
+    "filename": "html/p4p.msite.graphicDetail.html",
+    "template": "html/p4p.msite.graphicDetail.html"
   }
 };

@@ -14,7 +14,7 @@ var p4pBusinessLogic = require('./p4p.base');
  */
 $(function () {
     var p4pBusinessLogicEntity = new p4pBusinessLogic({
-
+        params_p4p:{ sys: 'js',bus:'p4p_pic' },
         /**
          * [keyword 关键字]
          * @type {Object}

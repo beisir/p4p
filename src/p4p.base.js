@@ -17,13 +17,23 @@ $(function() {
  * @return {Object} [p4p业务对象实例]
  */
 function p4pBusinessLogic(options) {
-  var _this = this;
+  var _this = this,
+      date_ = {
+          w: '',
+          mc: 'seller',
+          sys: 'ls',
+          p4p: '1'
+        };
 
   /**
    * 扩展业务对象属性
    */
   $.extend(true, _this, {
-
+    /**
+     * [p4p两个参数]
+     * @type {Object}
+     */
+    params_p4p:{ sys: '',bus:'' },
     /**
      * [listener 事件监听缓存对象]
      * @type {Object}
@@ -42,12 +52,7 @@ function p4pBusinessLogic(options) {
        */
       data: {
         url: '//s.hc360.com/getmmtlast.cgi',
-        data: {
-          w: '',
-          mc: 'seller',
-          sys: 'ls',
-          p4p: '1'
-        },
+        data: $.extend(date_,options.params_p4p),
         dataType: 'jsonp',
         jsonp: 'jsoncallback',
         timeout: 3000
@@ -66,7 +71,7 @@ function p4pBusinessLogic(options) {
         timeout: 3000
       }
     },
-
+    
     /**
      * [wrap 广告位包裹元素]
      * @type {Object}

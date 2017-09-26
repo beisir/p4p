@@ -383,6 +383,7 @@
         ];
 
     var p4pBusinessLogicEntity = new p4pBusinessLogic({
+        params_p4p:{ sys: 'msite',bus:'p4p_reco' },
         /**
          * [keyword 关键字]
          * @type {Object}

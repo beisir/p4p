@@ -5,6 +5,7 @@
 var p4pBusinessLogic=require('./p4p.base');
 
 var p4pMicroportal=new p4pBusinessLogic({
+    params_p4p:{ sys: 'miniportal',bus:'p4p' },
     /**
      * [wrap 广告位包裹元素]
      * @type {Object}

@@ -65,6 +65,7 @@ window.slider = function (option) {
  * 创建p4p实例
  */
 var p4pBusinessLogicEntity = new p4pBusinessLogic({
+    params_p4p:{ sys: 'zdomain',bus:'p4p_top' },
     /****
      * 需要点击计费的元素
      */

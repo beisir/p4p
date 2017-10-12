@@ -1857,27 +1857,24 @@ $(function () {
      * @type {Array}
      */
     var _tempHTMLArray = [
-      '{{each products as product i}}',
-      '<li>',
-      '<div class="p4pLeftImg"><a href="{{product.searchResultfoUrl}}" target="_blank"><img src="{{product.businImage2}}" alt="{{product.searchResultfoTitle}}" title="{{product.searchResultfoTitle}}"></a></div>',
-      '<div class="p4pRigList">',
-      '<dl>',
-      '<dt><a href="{{product.searchResultfoUrl}}" target="_blank" title="{{product.corKeyword}}">{{product.corKeyword}}</a></dt>',
-      '</dl>',
-      '{{if product.searchResultfoBrand}}',
-      '<p><span>品牌：</span>{{product.searchResultfoBrand}}</p>',
-      '{{/if}}',
-      '{{each product.pretreatAttrs }}',
-      '{{if $index<3 }}',
-      '<p><span>{{$value.name}}：</span>{{$value.value}}</p>',
-      '{{/if}}',
-      '{{/each}}',
-      '{{if product.searchResultfoCompany}}',
-      '<p><span>公司名称：</span><a href="//{{product.searchResultfoUserName}}.b2b.hc360.com/" target="_blank" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a></p>',
-      '{{/if}}',
-      '</div>',
-      '</li>',
-      '{{/each}}'
+        '{{each products as product i}}',
+        '<li>',
+        '<div class="p4pLeftImg"><a href="{{product.searchResultfoUrl}}" target="_blank"><img src="{{product.businImage2}}" alt="{{product.searchResultfoTitle}}" title="{{product.searchResultfoTitle}}"></a></div>',
+        '<div class="p4pRigList">',
+        '<dl>',
+        '<dt><a href="//{{product.searchResultfoUserName}}.b2b.hc360.com/" target="_blank" title="{{product.searchResultfoCompany}}">{{product.searchResultfoCompany}}</a></dt>',
+        '</dl>',
+        '{{if product.searchResultfoBrand}}',
+        '<p><span>品牌：</span>{{product.searchResultfoBrand}}</p>',
+        '{{/if}}',
+        '{{each product.pretreatAttrs }}',
+        '{{if $index<3 }}',
+        '<p><span>{{$value.name}}：</span>{{$value.value}}</p>',
+        '{{/if}}',
+        '{{/each}}',
+        '</div>',
+        '</li>',
+        '{{/each}}'
     ];
 
     /****

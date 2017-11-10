@@ -18,8 +18,8 @@ var deferredHUangzhan = $.Deferred(),
   apValue = window.p4pAddition||{},
   ap = [],
   huangzhanIndex = 0,//搜索结果第一行显示了p4p商品数，第一行如果显示了3条p4p，黄展从索引3开始取后面的数据
-  _lineDisplayProductNum,//当前分辨率下，搜索第一行和最后一排的P4P需要展示的个数
-  recommendedArr = [];//底部热门推荐的数组对象
+  _lineDisplayProductNum,//当前分辨率下,第一排和最后一排的P4P需要展示的个数
+   recommendedArr = [];//底部热门推荐的数组对象
 
 //搜索ab测试，搜索页面扣费曝光调用P4P接口都对应加上这个参数
 for (var key in apValue) {
@@ -641,16 +641,35 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
         return product;
       }
     }),
-
     /**
-     * 商品数据记录数
+     * 过滤出搜索结果页，满足精准命中客户投放词数据的条数
      */
-    _num = _prolist.length;
+    _firstProlist = $.map(_data, function (product, index) {
+      if (Number(product.searchResultfoMatchValue) < 4) {
+        return product;
+      }
+    });
+   
 
-  /**
-   * [P4P优质个数为3个以下时，显示所有P4P商品。大于3时，显示当前分辨率下完整显示一行的商品个数]
-   */
-  _prolist.splice((_num <= 3 ? _num : _lineDisplayProductNum), _prolist.length);
+    if(_firstProlist.length>=_lineDisplayProductNum*2){
+      /**
+       * 商品数据记录数
+       */
+       _num = _firstProlist.length;
+      
+      _prolist.splice((_lineDisplayProductNum*2), _prolist.length);
+
+    }else{
+      /**
+       * 商品数据记录数
+       */
+    _num = _prolist.length;
+    /**
+     * [P4P优质个数为3个以下时，显示所有P4P商品。大于3时，显示当前分辨率下完整显示一行的商品个数]
+     */
+    _prolist.splice((_num <= 3 ? _num : _lineDisplayProductNum), _prolist.length);
+
+    } 
 
   /****
    * 解决P4P数据就绪延迟对象后,判断页面有hidp4p标签，将data数据清空，不渲染P4P

@@ -5,6 +5,12 @@ module.exports = {
 		"filename": "html/p4p.search.resultList.html",
 		"template": "html/p4p.search.resultList.html"
 	},
+	"p4p.search.oldresultList": {
+		"desc": "S域，搜索结果列表页旧的业务逻辑，搜索AB测试需要用到",
+		"url": "//s.hc360.com/?w=led&mc=seller&ap=A",
+		"filename": "html/p4p.search.oldresultList.html",
+		"template": "html/p4p.search.oldresultList.html"
+	},
 	"p4p.www.aladdin": {
 		"desc": "WWW域，阿拉丁着陆页",
 		"url": "//www.hc360.com/series/bdald/4334328.html?w=�����Ǳ�&confr=8&kid=4334328&subconfr=1",

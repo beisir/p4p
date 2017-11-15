@@ -636,7 +636,8 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
   /**
    * [过滤出优质的P4P商品]
    */
-  var _prolist = $.map(_data, function (product, index) {
+  var  
+    _prolist = $.map(_data, function (product, index) {
       if (Number(product.searchResultfoIsRecomHQ) === 1) {
         return product;
       }
@@ -657,7 +658,10 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
        */
        _num = _firstProlist.length;
       
-      _prolist.splice((_lineDisplayProductNum*2), _prolist.length);
+       _firstProlist.splice((_lineDisplayProductNum*2), _prolist.length);
+
+       /***覆盖原有数据 */
+       _prolist=_firstProlist;
 
     }else{
       /**

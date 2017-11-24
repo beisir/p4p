@@ -232,6 +232,12 @@ module.exports = {
 		"url": "",
 		"filename": "html/p4p.msite.purchaserecommend.html",
 		"template": "html/p4p.msite.purchaserecommend.html"
+	},
+		"p4p.madata.pursuccess": {
+		"desc": "发布成功",
+		"url": "",
+		"filename": "html/p4p.madata.pursuccess.html",
+		"template": "html/p4p.madata.pursuccess.html"
 	}
-	
+
 };

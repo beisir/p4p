@@ -13,7 +13,11 @@ if(parameters("params").indexOf("bcid")>=0){
     
 }else if(parameters("params").indexOf("infoId")>=0){
     paramword = '{"infoId":' + parameters("params").split("@")[1]+'}';
+}else if(parameters("params").indexOf("purchaseId")>=0){
+    paramword = '{"purchaseId":' + parameters("params").split("@")[1]+'}';
 }
+
+
 ////调钱文可接口，返回搜索词
 $.ajax({
     url:"http://madata.hc360.com/wxservice/purchase/getPurchaseDetail",

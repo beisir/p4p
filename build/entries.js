@@ -209,16 +209,29 @@ module.exports = {
 	"filename": "html/p4p.b2b.machine.html",
 	"template": "html/p4p.b2b.machine.html"
 	},
-  "p4p.b2b.aladdinTitle": {
+    "p4p.b2b.aladdinTitle": {
     "desc": "阿拉丁大标题",
     "url": "//www.hc360.com/aladdinTitle/",
     "filename": "html/p4p.b2b.aladdinTitle.html",
     "template": "html/p4p.b2b.aladdinTitle.html"
-  },
-  "p4p.msite.graphicDetail": {
+    },
+    "p4p.msite.graphicDetail": {
     "desc": "M站详情页",
     "url": "",
     "filename": "html/p4p.msite.graphicDetail.html",
     "template": "html/p4p.msite.graphicDetail.html"
-  }
+    },
+  	"p4p.msite.purchase": {
+		"desc": "采购平台公司名片",
+		"url": "",
+		"filename": "html/p4p.msite.purchase.html",
+		"template": "html/p4p.msite.purchase.html"
+	},
+  	"p4p.msite.purchaserecommend": {
+		"desc": "采购平台采购需求",
+		"url": "",
+		"filename": "html/p4p.msite.purchaserecommend.html",
+		"template": "html/p4p.msite.purchaserecommend.html"
+	}
+	
 };

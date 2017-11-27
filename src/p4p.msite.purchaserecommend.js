@@ -8,31 +8,84 @@ var p4pBusinessLogic = require('./p4p.base'),
 //parameters("params").split("@")[2].split("$")[0]
 //调钱文可接口，返回搜索词
 var paramword = "";
-if(parameters("params").indexOf("bcid")>=0){
-    paramword = '{"bcid":'+parameters("params").split("@")[2].split("$")[0]+'}';
-    
-}else if(parameters("params").indexOf("infoId")>=0){
-    paramword = '{"infoId":' + parameters("params").split("@")[1]+'}';
+var params = parameters("params");
+var arr = params.split("$");
+var param = {};
+for(var i=0; i<arr.length; i++){
+    var tmp = arr[i].split("@");
+    param[tmp[0]] = tmp[1];
 }
-console.log(paramword)
+// if(parameters("params").indexOf("bcid")>=0){
+//     paramword = '{"bcid":"'+param["bcid"]+'"}';
+    
+// }else if(parameters("params").indexOf("infoId")>=0){
+//     paramword = '{"infoId":"' + param["infoId"]+'"}';
+// }
+// console.log(paramword)
 $.ajax({
     url:"http://madata.hc360.com/wxservice/purchase/getPurchaseDetail",
     type:'get',
     dataType:'jsonp',
     jsonp: "callback",
-    data:JSON.parse(paramword),
+    data:param,
     success:function(date){
         var date_ = date.msgBody,
             numbtype = ["","简版询价单","查看联系方式","发采购信息","公司留言","m站 发布询价","m站发布采购单","简版询价单-3y","查看联系方式-3y","快速发采购信息","快速发采购信息-3y","公司留言-3y","发发离线留言","收藏信息","采购单信息","发送短信采集"]
-        var dateday = date_.createtime.substring(0,11);
-        $(".cont1").html(dateday);
-        $(".cont2").html(date_.mobilephone);
-        $(".cont3").html(numbtype[date_.purchasetype]);
-        $(".cont4").html(date_.purchaseproduct);
-        $(".cont5").html(date_.companyname);
+        //日期
+        if(date_.createtime != "" && date_.createtime != undefined){
+            var dateday = date_.createtime.substring(0,11);
+            $(".cont1").html(dateday);
+        }else{
+            $(".cont1").parent("li").hide()
+        }
+        //卖家手机
+        if(date_.cormp != "" && date_.cormp != undefined){
+            $(".cont2").html('<a href="tel:'+date_.cormp+'">'+date_.cormp+'</a>');
+        }else{
+            $(".cont2").parent("li").hide()
+        }
+        //采购类型
+        var p4p = param["p4p"];
+        if(date_.purchasetype != "" && date_.purchasetype != undefined){
+            $(".cont3").html(numbtype[date_.purchasetype]);
+        }else{
+            $(".cont3").parent("li").hide()
+        }
+       					  
+        //采购商品
+        if(p4p!=undefined && p4p!='undefined'){
+            $(".cont4").html("<a href='http://"+date_.sellname+".wx.hc360.com/shop/"+date_.bcid+".html'>"+date_.title+"</a>");//采购产品名称
+        }else{
+            if(date_.title != "" && date_.title != undefined){
+                $(".cont4").html("<a href='http://"+date_.sellname+".wx.hc360.com/shop/"+date_.infoid+".html'>"+date_.title+"</a>");//采购产品名称
+            }else{
+                $(".cont4").parent("li").hide()
+            }
+        }   
         
+        //供应商名称
+        if(date_.companyname != "" && date_.companyname != undefined){
+            $(".cont5").html(date_.companyname);
+            if(date_.sellname != undefined && date_.sellname != 'undefined' ) {
+                $(".cont5").html("<a href='http://"+date_.sellname+".wx.hc360.com'>"+date_.companyname+"</a>"); //供应商名称
+            }
+        }else{
+            $(".cont5").parent("li").hide()
+        }
+        
+        
+
+
+
         $("#onlineCommunicate").attr("href","./onlineLeaveMess.html?params=sellerId%2540"+date_.sellname+"%2524msgID%2540"+date_.infoid+"%2524buyerName%2540"+date_.buyname+"%2524messtype%2540company");
-        $("#sellerCardBtn").attr("href","./companyCardDetail.html?params=purchaseId@"+date_.id+"");
+        // $("#sellerCardBtn").attr("href","./companyCardDetail.html?params=purchaseId@"+date_.id+"");
+        if(date_.id && date_.id>0){
+            $("#sellerCardBtn").attr("href","./companyCardDetail.html?params=purchaseId@"+date_.id+"");
+        }else if(date_.bcid && date_.bcid>0){
+            $("#sellerCardBtn").attr("href","./companyCardDetail.html?params=bcid@"+date_.bcid+"");
+        }else if(date_.infoid && date_.infoid>0){
+            $("#sellerCardBtn").attr("href","./companyCardDetail.html?params=infoId@"+date_.infoid+"");
+        }
         $(".moreInfo a").attr("href","https://m.hc360.com/search/nothot?keyword="+encodeURI(encodeURI(date_.p4pcoreKeyword)));
         var p4pBusinessLogicEntity = new p4pBusinessLogic({
 

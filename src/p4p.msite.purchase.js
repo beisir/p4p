@@ -8,15 +8,23 @@ var p4pBusinessLogic = require('./p4p.base'),
 //parameters("params").split("@")[1]
 //parameters("params").split("@")[2].split("$")[0]
 var paramword = "";
-if(parameters("params").indexOf("bcid")>=0){
-    paramword = '{"bcid":'+parameters("params").split("@")[2].split("$")[0]+'}';
-    
-}else if(parameters("params").indexOf("infoId")>=0){
-    paramword = '{"infoId":' + parameters("params").split("@")[1]+'}';
-}else if(parameters("params").indexOf("purchaseId")>=0){
-    paramword = '{"purchaseId":' + parameters("params").split("@")[1]+'}';
+var params = parameters("params");
+var arr = params.split("$");
+
+var param = {};
+for(var i=0; i<arr.length; i++){
+    var tmp = arr[i].split("@");
+    param[tmp[0]] = tmp[1];
 }
 
+// if(params.indexOf("bcid")>=0){
+//     paramword = '{"bcid":"'+param["bcid"]+'"}'; 
+// }else if(params.indexOf("infoId")>=0){
+//     paramword = '{"infoId":"' + param["infoId"]+'"}';
+// }else if(params.indexOf("purchaseId")>=0){
+//     paramword = '{"purchaseId":' + param["purchaseId"]+'}';
+// }
+// console.log(paramword)
 
 ////调钱文可接口，返回搜索词
 $.ajax({
@@ -24,14 +32,42 @@ $.ajax({
     type:'get',
     dataType:'jsonp',
     jsonp: "callback",
-    data:JSON.parse(paramword),
+    data:param,
     success:function(date){
         var date_ = date.msgBody;
-        $(".cont1").html(date_.cortel);
-        $(".cont2").html(date_.cormp);
-        $(".cont3").html(date_.sellname);
-        $(".cont4").html(date_.duty);
-        $(".cont5").html(date_.companyname);
+        //座机
+        if(date_.cortel != "" && date_.cortel != undefined){
+            $(".cont1").html('<a href="tel:'+date_.cortel+'">'+date_.cortel+'</a>');
+        }else{
+            $(".cont1").parent("li").attr("style","display:none")
+        }
+        //卖家手机
+        if(date_.cormp != "" && date_.cormp != undefined){
+            $(".cont2").html('<a href="tel:'+date_.cormp+'">'+date_.cormp+'</a>');
+        }else if(date_.corothermp !="" && date_.corothermp !=undefined){
+            $(".cont2").html(date_.corothermp);
+        }else{
+            $(".cont2").parent("li").attr("style","display:none")
+        }
+        //卖家联系人
+        if(date_.contact != "" && date_.contact != undefined){
+            $(".cont3").html(date_.contact);
+        }else{
+            $(".cont3").parent("li").attr("style","display:none")
+        }
+        //联系人职位
+        if(date_.duty != "" && date_.duty != undefined){
+            $(".cont4").html(date_.duty);
+        }else{
+            $(".cont4").parent("li").attr("style","display:none")
+        }
+        //供应商名称
+        if(date_.companyname != "" && date_.companyname != undefined){
+            $(".cont5").html(date_.companyname);
+        }else{
+            $(".cont5").parent("li").attr("style","display:none")
+        }
+        
 
         $(".moreInfo a").attr("href","https://m.hc360.com/search/nothot?keyword="+encodeURI(encodeURI(date_.p4pcoreKeyword)));
        var p4pBusinessLogicEntity = new p4pBusinessLogic({

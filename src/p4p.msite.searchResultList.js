@@ -164,13 +164,13 @@ $(function () {
              * @type {number}
              */
 
-            horizontalIndex = (pageIndex - 1) * 8,
+            horizontalIndex = (pageIndex - 1) * 9,
 
             /**
              * [横排 当前页展示P4P索引结束]
              * @type {Number}
              */
-            horizontalLimit = pageIndex * 8,
+            horizontalLimit = pageIndex * 9,
 
             /****
              * 横排当前页面的P4P数据
@@ -223,11 +223,11 @@ $(function () {
                 }
 
                 /****
-                 * 遍历p4pwrap对象，每个对象顺序插入两条对应的p4p数据，一页最多显示8条
+                 * 遍历p4pwrap对象，每个对象顺序插入三条对应的p4p数据，一页最多显示9条
                  */
                 $.each(p4pWrap, function (index, val) {
                     if ((!single_horizontally_index) || (single_horizontally_index > index)) {
-                        var p4pHtmlArr=targetDom.slice(index * 2, (index + 1) * 2);
+                        var p4pHtmlArr=targetDom.slice(index * 3, (index + 1) * 3);
                         if(p4pHtmlArr.length>0){
                             $(val).show().find('ul').html(p4pHtmlArr);
                         }
@@ -281,15 +281,15 @@ $(function () {
             /****
              * 如果当前数组只有一个数据，用单个模板对象
              */
-            if (_prolist.length == 1) {
+            if (_prolist.length == 1 || _prolist.length == 2) {
                 _this.template = htmlTemplate.single;
             } else {
-                if (_prolist.length % 2 == 1) {
+                if (_prolist.length % 3 == 1) {
                     /**
                      * 第几排插入单个模板
                      * @type {number}
                      */
-                    single_horizontally_index = Math.floor(_prolist.length / 2);
+                    single_horizontally_index = Math.floor(_prolist.length / 3);
                     /***
                      * 如果当前页面P4P数据是奇数，则截取偶数部分数据渲染一行两个的模板数据
                      */
@@ -299,6 +299,23 @@ $(function () {
                      */
                     _template_Horizontally_single = _this.templateEngine.render(htmlTemplate.single)({
                         products: _prolist.slice(_prolist.length - 1)
+                    })
+                }else if(_prolist.length % 3 == 2){
+
+                    /**
+                     * 第几排插入单个模板
+                     * @type {number}
+                     */
+                    single_horizontally_index = Math.floor(_prolist.length / 3);
+                    /***
+                     * 如果当前页面P4P数据是奇数，则截取偶数部分数据渲染一行两个的模板数据
+                     */
+                    _data.searchResultInfo = _prolist.slice(0, _prolist.length - 1);
+                    /****
+                     * 如果存在奇数，1个数据就直接渲染单个模板样式，多个数据，先渲染偶数模板样式，剩下一个单个模板创建dom结构返回单个模板dom对象
+                     */
+                    _template_Horizontally_single = _this.templateEngine.render(htmlTemplate.single)({
+                        products: _prolist.slice(_prolist.length - 2)
                     })
                 }
             }
@@ -482,7 +499,7 @@ $(function () {
                  */
                 $.each(p4pWrap, function (index, val) {
                     if ((!single_vertical_index) || (single_vertical_index > index)) {
-                        var p4pHtmlArr=targetDom.slice(index * 2, (index + 1) * 2);
+                        var p4pHtmlArr=targetDom.slice(index * 3, (index + 1) * 3);
                         if(p4pHtmlArr.length>0){
                             $(val).show().find('ul').html(p4pHtmlArr);
                         }

@@ -1,5 +1,6 @@
 /**
  * [p4pBusinessLogic 导入P4P基础业务逻辑对象]
+ *  2017年12月6号，p4p修改，横排改成一排显示3个商品，一页最多展示9个，竖排不变，一排2个，一页最多展示8个
  * @type {Object}
  */
 var p4pBusinessLogic = require('./p4p.base');
@@ -180,6 +181,7 @@ $(function () {
 
         /**
          * [p4pHorizontallyEntity 实例化横排P4P基础业务逻辑对象实例]
+         * @description 横排数据一排展示3个，最多一页展示9条数据
          * @type {p4pBusinessLogic}
          */
         var p4pHorizontallyEntity = new p4pBusinessLogic({
@@ -279,43 +281,27 @@ $(function () {
                 _prolist = _data.searchResultInfo || [];
 
             /****
-             * 如果当前数组只有一个数据，用单个模板对象
+             * 如果当前数组只有一个或者两个数据，用单个模板对象
              */
             if (_prolist.length == 1 || _prolist.length == 2) {
                 _this.template = htmlTemplate.single;
             } else {
-                if (_prolist.length % 3 == 1) {
+                var mod=_prolist.length % 3;
+                if (mod == 1 || mod==2 ) {
                     /**
                      * 第几排插入单个模板
                      * @type {number}
                      */
                     single_horizontally_index = Math.floor(_prolist.length / 3);
                     /***
-                     * 如果当前页面P4P数据是奇数，则截取偶数部分数据渲染一行两个的模板数据
+                     *如果数据除以三有余数，比如5，则把数据截取为3个，其他的两个用single单个模板去渲染
                      */
-                    _data.searchResultInfo = _prolist.slice(0, _prolist.length - 1);
+                    _data.searchResultInfo = _prolist.slice(0, _prolist.length - mod);
                     /****
-                     * 如果存在奇数，1个数据就直接渲染单个模板样式，多个数据，先渲染偶数模板样式，剩下一个单个模板创建dom结构返回单个模板dom对象
+                     * 剩下的余数用单个模板创建dom结构返回单个模板dom对象
                      */
                     _template_Horizontally_single = _this.templateEngine.render(htmlTemplate.single)({
-                        products: _prolist.slice(_prolist.length - 1)
-                    })
-                }else if(_prolist.length % 3 == 2){
-
-                    /**
-                     * 第几排插入单个模板
-                     * @type {number}
-                     */
-                    single_horizontally_index = Math.floor(_prolist.length / 3);
-                    /***
-                     * 如果当前页面P4P数据是奇数，则截取偶数部分数据渲染一行两个的模板数据
-                     */
-                    _data.searchResultInfo = _prolist.slice(0, _prolist.length - 1);
-                    /****
-                     * 如果存在奇数，1个数据就直接渲染单个模板样式，多个数据，先渲染偶数模板样式，剩下一个单个模板创建dom结构返回单个模板dom对象
-                     */
-                    _template_Horizontally_single = _this.templateEngine.render(htmlTemplate.single)({
-                        products: _prolist.slice(_prolist.length - 2)
+                        products: _prolist.slice(_prolist.length - mod)
                     })
                 }
             }
@@ -360,7 +346,7 @@ $(function () {
         });
 
         /**
-         *  横排P4P业务每一页最多展示8个p4p商品数据,最多展示3页
+         *  横排P4P业务每一页最多展示9个p4p商品数据,最多展示3页
          */
         if (pageIndex <= 3) {
             /***
@@ -430,14 +416,14 @@ $(function () {
              * @type {number}
              */
 
-            verticalIndex = (pageIndex - 1) * 4,
+            verticalIndex = (pageIndex - 1) * 6,
 
 
             /**
              * [竖排 当前页展示P4P索引结束]
              * @type {Number}
              */
-            verticalLimit = pageIndex * 4,
+            verticalLimit = pageIndex * 6,
 
 
             /****
@@ -495,17 +481,18 @@ $(function () {
                 }
 
                 /****
-                 * 遍历p4pwrap对象，每个对象顺序插入两条对应的p4p数据，一页最多显示8条
+                 * 遍历p4pwrap对象，每个对象顺序插入3条对应的p4p数据，一页最多显示9条
                  */
                 $.each(p4pWrap, function (index, val) {
                     if ((!single_vertical_index) || (single_vertical_index > index)) {
-                        var p4pHtmlArr=targetDom.slice(index * 3, (index + 1) * 3);
+                        var p4pHtmlArr=targetDom.slice(index * 3, (index + 1) *3);
                         if(p4pHtmlArr.length>0){
                             $(val).show().find('ul').html(p4pHtmlArr);
                         }
                     }
                     return;
                 });
+
 
                 return targetDom;
             },
@@ -553,25 +540,26 @@ $(function () {
             /****
              * 如果当前数组只有一个数据，用单个模板对象
              */
-            if (_prolist.length == 1) {
+            if (_prolist.length == 1||_prolist.length==2) {
                 _this.template = htmlTemplate.single;
             } else {
-                if (_prolist.length % 2 == 1) {
+                var mod=_prolist.length % 3;
+                if (mod==1||mod==2) {
                     /**
                      * 第几排插入单个模板
                      * @type {number}
                      */
-                    single_vertical_index = Math.floor(_prolist.length / 2);
+                    single_vertical_index = Math.floor(_prolist.length / 3);
                     /***
                      * 如果当前页面P4P数据是奇数，则截取偶数部分数据渲染一行两个的模板数据
                      */
-                    _data.searchResultInfo = _prolist.slice(0, _prolist.length - 1);
+                    _data.searchResultInfo = _prolist.slice(0, _prolist.length - mod);
 
                     /****
                      * 如果存在奇数，1个数据就直接渲染单个模板样式，多个数据，先渲染偶数模板样式，剩下一个单个模板创建dom结构返回单个模板dom对象
                      */
                     _template_vertical_single = _this.templateEngine.render(htmlTemplate.single)({
-                        products:_prolist.slice(_prolist.length - 1)
+                        products:_prolist.slice(_prolist.length - mod)
                     });
                 }
             }
@@ -662,7 +650,7 @@ $(function () {
                     /***
                      * 初始化竖排P4P实例
                      */
-                    p4pVerticalEntity.init();
+                   p4pVerticalEntity.init();
                 });
             }
         }

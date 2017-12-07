@@ -21,54 +21,54 @@ var templateEntity = [
 var  P4PBusinessLogincEntity = new p4pBusinessLogic({
         params_p4p:{ sys: 'detail3y',bus:'p4p_contactus' },
         /**
-         * [keyword ¹Ø¼ü×Ö]
+         * [keyword å…³é”®å­—]
          * @type {Object}
          */
         keyword: (window.HC && window.HC.getCookie && window.HC.getCookie("hclastsearchkeyword")) || window.titleKey,
 
         /**
-         * [referrer À´Ô´]
+         * [referrer æ¥æº]
          * @type {Number}
          */
         referrer: 40,
 
         /**
-         * [clickableElementSelector µã»÷¼Æ·ÑÔªËØÑ¡ÔñÆ÷]
+         * [clickableElementSelector ç‚¹å‡»è®¡è´¹å…ƒç´ é€‰æ‹©å™¨]
          * @type {String}
          */
         clickableElementSelector: 'a',
 
         /**
-         * [wrap ¹ã¸æÎ»°ü¹üÔªËØ]
+         * [wrap å¹¿å‘Šä½åŒ…è£¹å…ƒç´ ]
          * @type {Object}
          */
         wrap: $(".p4pListBox .goods"),
 
         /**
-         * [template äÖÈ¾Ä£°åHTML]
+         * [template æ¸²æŸ“æ¨¡æ¿HTML]
          * @type {String}
          */
         template: templateEntity.join('')
 
     });
 /****
- * ¼àÌı»ñÈ¡Êı¾İ½áÊøÊÂ¼ş
+ * ç›‘å¬è·å–æ•°æ®ç»“æŸäº‹ä»¶
  */
 P4PBusinessLogincEntity.addEventListener('onDataReady', function (data) {
     var  /**
-         * [_data P4PÊı¾İ¶ÔÏó]
+         * [_data P4Pæ•°æ®å¯¹è±¡]
          * @type {Object}
          */
         _data = data || {},
 
         /**
-         * [_prolist P4PÉÌÆ·Êı¾İÁĞ±í]
+         * [_prolist P4På•†å“æ•°æ®åˆ—è¡¨]
          * @type {Array}
          */
         _prolist = _data.searchResultInfo || [];
 
     /**
-     * [¹ıÂË³öÓÅÖÊµÄP4PÉÌÆ·]
+     * [è¿‡æ»¤å‡ºä¼˜è´¨çš„P4På•†å“]
      */
     _prolist = $.map(_prolist, function (product) {
         if (Number(product.searchResultfoIsRecomHQ) === 1) {
@@ -77,8 +77,8 @@ P4PBusinessLogincEntity.addEventListener('onDataReady', function (data) {
     });
 
     /**
-     * [searchResultInfo ÒòÎª $.map Éú³ÉÁËĞÂµÄÊı×é£¬ËùÒÔ´Ë´¦ÔÙ½«¹ıÂËºóµÄÊı¾İ¸üĞÂµ½Ô­Ê¼Êı¾İ¼¯ÖĞ]
-     * ×î¶àÕ¹Ê¾8ÌõÊı¾İ£¬ÉÙÓÚ4¸ö²»Õ¹Ê¾
+     * [searchResultInfo å› ä¸º $.map ç”Ÿæˆäº†æ–°çš„æ•°ç»„ï¼Œæ‰€ä»¥æ­¤å¤„å†å°†è¿‡æ»¤åçš„æ•°æ®æ›´æ–°åˆ°åŸå§‹æ•°æ®é›†ä¸­]
+     * æœ€å¤šå±•ç¤º8æ¡æ•°æ®ï¼Œå°‘äº4ä¸ªä¸å±•ç¤º
      */
     _prolist=_prolist.slice(0,8);
     if(_prolist.length<4){
@@ -90,11 +90,11 @@ P4PBusinessLogincEntity.addEventListener('onDataReady', function (data) {
 
 });
 /****
- * ¼àÌıäÖÈ¾dom½áÊøÊÂ¼ş
+ * ç›‘å¬æ¸²æŸ“domç»“æŸäº‹ä»¶
  */
 P4PBusinessLogincEntity.addEventListener('onEndRender', function (targetElement) {
     /****
-     * ·¢ËÍ¼à²âµã
+     * å‘é€ç›‘æµ‹ç‚¹
      */
     targetElement.on('click', 'a', function () {
         try {
@@ -106,6 +106,6 @@ P4PBusinessLogincEntity.addEventListener('onEndRender', function (targetElement)
 
 });
 /****
- * ³õÊ¼»¯p4p
+ * åˆå§‹åŒ–p4p
  */
 P4PBusinessLogincEntity.init();

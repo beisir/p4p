@@ -72,11 +72,6 @@ $.ajax({
         }else{
             $(".cont5").parent("li").hide()
         }
-        
-        
-
-
-
         $("#onlineCommunicate").attr("href","./onlineLeaveMess.html?params=sellerId%2540"+date_.sellname+"%2524msgID%2540"+date_.infoid+"%2524buyerName%2540"+date_.buyname+"%2524messtype%2540company");
         // $("#sellerCardBtn").attr("href","./companyCardDetail.html?params=purchaseId@"+date_.id+"");
         if(date_.id && date_.id>0){

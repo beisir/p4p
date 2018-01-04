@@ -238,6 +238,12 @@ module.exports = {
 		"url": "",
 		"filename": "html/p4p.madata.pursuccess.html",
 		"template": "html/p4p.madata.pursuccess.html"
+	},
+	"p4p.msite.clickstream": {
+		"desc": "M站点击流",
+		"url": "",
+		"filename": "html/p4p.msite.clickstream.html",
+		"template": "html/p4p.msite.clickstream.html"
 	}
 
 };

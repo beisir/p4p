@@ -284,7 +284,7 @@
                 '       </a>',
                 '    </div>',
                 '    <p class="botName">',
-                '       <a href="//js.hc360.com/supplyself/{{product.searchResultfoId}}.html" data-sentLog="p4pDaTu">{{product.searchResultfoTitle}}</a>',
+                '       <a data-sentLog="p4ptitle" href="//js.hc360.com/supplyself/{{product.searchResultfoId}}.html">{{product.searchResultfoTitle}}</a>',
                 '    </p>',
                 '    <p class="botPrice">{{#product.pretreatPrice}}</p>',
                 '</li>',
@@ -346,6 +346,11 @@
         targetElement.on("click", '[data-sentLog="p4pDaTu"]', function() {
             try {
                 window.sendUserlogsElement && sendUserlogsElement('UserBehavior_p4p_jsitedetail_tupian');
+            } catch (ex) {}
+        });
+        targetElement.on("click", '[data-sentLog="p4ptitle"]', function() {
+            try {
+                window.sendUserlogsElement && sendUserlogsElement('UserBehavior_p4p_jsitedetail_title');
             } catch (ex) {}
         });
     });

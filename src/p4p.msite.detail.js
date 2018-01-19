@@ -370,10 +370,10 @@
             '{{ each products as product i }} ',
             '<li>',
             '<div class="listImg">',
-            '<a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html"><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}"></a>',
+            '<a data-sentLog="p4p_tupian" href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html"><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}"></a>',
             '</div>',
             '<dl>',
-            '<dt><a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}"><span>{{product.searchResultfoTitle}}</span></a></dt>',
+            '<dt><a data-sentLog="p4p_title" href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.searchResultfoTitle}}"><span>{{product.searchResultfoTitle}}</span></a></dt>',
             '<dd>',
             '<span>{{#product.pretreatPrice}}</span>',
             '</dd>',
@@ -463,9 +463,15 @@
         /**
          * [绑定监测点点击事件]
          */
-        targetElement.on("click", 'a', function () {
+        targetElement.on("click", '[data-sentLog="p4p_tupian"]', function () {
             try {
                 window.sendUserlogsElement&&sendUserlogsElement('UserBehavior_p4p_msitedetail_tupian');
+            } catch (ex) {
+            }
+        });
+        targetElement.on("click", '[data-sentLog="p4p_title"]', function () {
+            try {
+                window.sendUserlogsElement&&sendUserlogsElement('UserBehavior_p4p_msitedetail_title');
             } catch (ex) {
             }
         });

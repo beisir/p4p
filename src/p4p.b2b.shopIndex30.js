@@ -124,9 +124,15 @@ p4pBusinessLogicEntity.addEventListener('onEndRender', function (targetElement) 
     /**
      * [绑定监测点点击事件]
      */
-    targetElement.on("click", 'a', function () {
+    targetElement.on("click", '.recomImgBox a', function () {
         try {
-            HC.UBA.sendUserlogsElement('UserBehavior_p4p_spsy');
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_shopIndex30_img');
+        } catch (ex) {
+        }
+    });
+    targetElement.on("click", '.recomName a', function () {
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_shopIndex30_title');
         } catch (ex) {
         }
     });

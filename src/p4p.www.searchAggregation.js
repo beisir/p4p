@@ -222,9 +222,37 @@ p4pBusinessLogicEntity.addEventListener('onEndRender', function (targetElement) 
     /****
      * 发送监测点
      */
-    targetElement.on('click', 'a', function () {
+    targetElement.on('click', '.nImgBox', function () {
         try {
-            HC.UBA.sendUserlogsElement('UserBehavior_p4p_juhe_page');
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_juhe_page_img');
+        } catch (e) {
+            console.error(e);
+        }
+    });
+    targetElement.on('click', '.newName a', function () {
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_juhe_page_title');
+        } catch (e) {
+            console.error(e);
+        }
+    });
+    targetElement.on('click', '.newCname a', function () {
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_juhe_page_comp');
+        } catch (e) {
+            console.error(e);
+        }
+    });
+    targetElement.on('click', '.newImgAlert a', function () {
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_juhe_page_dianpu');
+        } catch (e) {
+            console.error(e);
+        }
+    });
+    targetElement.on('click', '.main_pro a', function () {
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_juhe_page_product');
         } catch (e) {
             console.error(e);
         }

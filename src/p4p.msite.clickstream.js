@@ -130,8 +130,8 @@ p4pBusinessLogicEntity.addEventListener('onEndRender',function(targetElement){
      * [绑定监测点点击事件]
      */
     targetElement.on("click","a",function(){
-        try {
-            HC.UBA.sendUserlogsElement('');
+        try {  
+            window.sendUserlogsElement&&sendUserlogsElement('UserBehavior_p4p_clickstream');
         } catch (ex) {
             
         }
@@ -142,5 +142,6 @@ p4pBusinessLogicEntity.addEventListener('onEndRender',function(targetElement){
    
 
 });
+
 p4pBusinessLogicEntity.init();
 }

@@ -7,12 +7,12 @@ var p4pBusinessLogic = require('./p4p.base'),
     '<ul>',
     '{{each products as product i}}',
     '<li>',
-    '<div class="proImg"><a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title=""><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}"></a></div>',
+    '<div class="proImg"><a onclick="HC.UBA.sendUserlogsElement(&quot;UserBehavior_p4p_aladdinTitle_title_two_img&quot;)" href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title=""><img src="{{product.searchResultfoImageBig}}" alt="{{product.searchResultfoTitle}}"></a></div>',
     '<div class="proBot">',
     '<dl>',
     '<dt><span class="seaNewPrice">{{#product.pretreatPrice}}</span></dt>',
-    '<dd class="newName"><a href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title="{{product.searchResultfoTitle}}">{{#product.pretreatTitle}}</a></dd>',
-    '<dd class="newCname"><p><a href="{{product.pretreatShopUrl}}" target="_blank" title="{{ product.searchResultfoCompany }}">{{ product.searchResultfoCompany }}</a></p>',
+    '<dd class="newName"><a onclick="HC.UBA.sendUserlogsElement(&quot;UserBehavior_p4p_aladdinTitle_title_two_title&quot;)" href="//b2b.hc360.com/supplyself/{{product.searchResultfoId}}.html" target="_blank" title="{{product.searchResultfoTitle}}">{{#product.pretreatTitle}}</a></dd>',
+    '<dd class="newCname"><p><a onclick="HC.UBA.sendUserlogsElement(&quot;UserBehavior_p4p_aladdinTitle_title_two_comp&quot;)" href="{{product.pretreatShopUrl}}" target="_blank" title="{{ product.searchResultfoCompany }}">{{ product.searchResultfoCompany }}</a></p>',
     '{{if (pretreatResultfoAs) }}',
     '<div class="newNameRight"><a href="//{{product.searchResultfoUserName}}.b2b.hc360.com/shop/mmtdocs.html" target="_blank" class="mmtIco" title="认证会员">{{product.searchResultfoMmtYearAge}}年</a></div>',
     '{{/if}}',
@@ -207,7 +207,28 @@ p4pBusinessLogicEntity.addEventListener('onDataReady', function (data) {
   _this.target = _this.wrap.find('[data-p4p-mark]');
 });
 
+//
+p4pBusinessLogicEntity.addEventListener('onEndRender',function(targetElement){
+   
+    /**
+     * [绑定监测点点击事件]
+     */
+    targetElement.on("click",".proRigImg a",function(){
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_aladdinTitle_landing_two_img');
+        } catch (ex) {
+            
+        }
+    });
+    targetElement.on("click",".newName a",function(){
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_aladdinTitle_landing_two_title');
+        } catch (ex) {
+            
+        }
+    });
 
+});
 /**
  * 开始P4P业务对象初始化
  */
@@ -316,8 +337,36 @@ p4pBusinesstopEntity.addEventListener('onDataReady', function (data) {
    */
   _this.target = _this.wrap.find('[data-p4p-top]');
 });
+//UserBehavior_p4p_aladdinTitle_landing_hotsearch
+p4pBusinesstopEntity.addEventListener('onEndRender',function(targetElement){
+   
+    /**
+     * [绑定监测点点击事件]
+     */
+    targetElement.on("click",".p4pImg a",function(){
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_aladdinTitle_landing_hotsearch_img');
+        } catch (ex) {
+            
+        }
+    });
+    targetElement.on("click",".p4pTit a",function(){
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_aladdinTitle_landing_hotsearch_title');
+        } catch (ex) {
+            
+        }
+    });
+    targetElement.on("click",".p4pRig dt a",function(){
+        try {
+            HC.UBA.sendUserlogsElement('UserBehavior_p4p_aladdinTitle_landing_hotsearch_comp');
+        } catch (ex) {
+            
+        }
+    });
+ 
 
-
+});
 /***
  * [p4pBusinesstopEntity 实例化顶部从百度进来页面的P4P对象]
  */

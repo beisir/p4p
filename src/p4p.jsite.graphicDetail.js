@@ -173,9 +173,9 @@ $(function () {
         /**
          * [绑定监测点点击事件]
          */
-        targetElement.on("click", '[data-sentLog="p4pDaTu"]', function() {
+        targetElement.on("click", 'a', function() {
             try {
-                sendUserlogsElement&&sendUserlogsElement('UserBehavior_p4p_js_pic_detail');
+                window.sendUserlogsElement && sendUserlogsElement('UserBehavior_p4p_jsdetail_supplyself');
             } catch (ex) {}
         });
     });

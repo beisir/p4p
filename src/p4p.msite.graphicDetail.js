@@ -119,7 +119,7 @@ $(function () {
          */
         targetElement.on("click", 'a', function () {
             try {
-                window.sendUserlogsElement && sendUserlogsElement('UserBehavior_p4p_m_freedetail_supplyself');
+                window.sendUserlogsElement && sendUserlogsElement('UserBehavior_p4p_mdetail_supplyself');
             } catch (ex) {
             }
         });

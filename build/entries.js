@@ -215,6 +215,12 @@ module.exports = {
     "filename": "html/p4p.b2b.aladdinTitle.html",
     "template": "html/p4p.b2b.aladdinTitle.html"
     },
+    "p4p.b2b.newaladdin": {
+    "desc": "阿拉丁大标题",
+    "url": "//www.hc360.com/newaladdin/",
+    "filename": "html/p4p.b2b.newaladdin.html",
+    "template": "html/p4p.b2b.newaladdin.html"
+    },
     "p4p.msite.graphicDetail": {
     "desc": "M站详情页",
     "url": "",

@@ -1044,7 +1044,13 @@ p4pBusinessLogicEntity.addEventListener('onStartRender', function (template, tem
    */
   $.each(_prolist, function (index, product) {
     product.searchResultfoImageBig = product.searchResultfoImageBig.replace(/(\.\.)(\d+x\d+)/ig, '$1220x220a');
-    product.pretreatPrice = (parseFloat(product.searchResultfoUnitPrice) === 0) ? '面议' : ('<s>&yen;</s>' + ConversionPrice(product.searchResultfoUnitPrice) + '/' + product.searchResultfoMeasureUnit);
+    var nullstr;
+    if(product.searchResultfoMeasureUnit == 'null' || product.searchResultfoMeasureUnit == ''){
+      nullstr = '<s>&yen;</s>' + ConversionPrice(product.searchResultfoUnitPrice);
+    }else{
+      nullstr = '<s>&yen;</s>' + ConversionPrice(product.searchResultfoUnitPrice) + '/' + product.searchResultfoMeasureUnit;
+    }
+    product.pretreatPrice = (parseFloat(product.searchResultfoUnitPrice) === 0) ? '面议' : nullstr;
     product.searchKeyword = window.hc_keyword || '';
 
     /**
@@ -1370,7 +1376,13 @@ $(function () {
        */
       $.each(_prolist, function (index, product) {
         product.searchResultfoImageBig = product.searchResultfoImageBig.replace(/(\.\.)(\d+x\d+)/ig, '$1220x220a');
-        product.pretreatConversionPrice = (parseFloat(product.searchResultfoUnitPrice) === 0) ? '面议' : ('&yen;' + ConversionPrice(product.searchResultfoUnitPrice) + ' &frasl;' + product.searchResultfoMeasureUnit);
+        var nullstr_1;
+        if(product.searchResultfoMeasureUnit == 'null' || product.searchResultfoMeasureUnit == ''){
+          nullstr_1 = '&yen;' + ConversionPrice(product.searchResultfoUnitPrice);
+        }else{
+          nullstr_1 = '&yen;' + ConversionPrice(product.searchResultfoUnitPrice) + ' &frasl;' + product.searchResultfoMeasureUnit;
+        }
+        product.pretreatConversionPrice = (parseFloat(product.searchResultfoUnitPrice) === 0) ? '面议' : nullstr_1;
       });
     });
 
@@ -1676,7 +1688,13 @@ $(function () {
        */
       $.each(_prolist, function (index, product) {
         product.searchResultfoImageBig = product.searchResultfoImageBig.replace(/(\.\.)(\d+x\d+)/ig, '$1220x220a');
-        product.pretreatPrice = (parseFloat(product.searchResultfoUnitPrice) === 0) ? '面议' : ('<s>&yen;</s>' + ConversionPrice(product.searchResultfoUnitPrice) + '/' + product.searchResultfoMeasureUnit);
+        var nullstr_2;
+        if(product.searchResultfoMeasureUnit == 'null' || product.searchResultfoMeasureUnit == ''){
+          nullstr_2 = '<s>&yen;</s>' + ConversionPrice(product.searchResultfoUnitPrice);
+        }else{
+          nullstr_2 = '<s>&yen;</s>' + ConversionPrice(product.searchResultfoUnitPrice) + '/' + product.searchResultfoMeasureUnit;
+        }
+        product.pretreatPrice = (parseFloat(product.searchResultfoUnitPrice) === 0) ? '面议' : nullstr_2;
         product.searchKeyword = window.hc_keyword || '';
 
         /**
@@ -2257,7 +2275,7 @@ window.search_recommend_callback = function () {
           str = '<em>&yen;</em>' + price;
         if (Number(price) == 0) {
           str = '<a  target="_blank" class="getPrice" href=\"' + url + '#contact\">点此询价</a>';
-        } else if (unit.length != 0) {
+        } else if (unit.length != 0 && unit != 'null') {
           str = str + '/' + unit;
         }
         return str;

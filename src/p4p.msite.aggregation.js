@@ -125,8 +125,15 @@ var _ua = require('./ua').parseUA(window.navigator.userAgent),
    * url查询参数
    */
   _params= (p4pBusinessLogic.prototype.parseURL(document.URL)||{}).params,
-  clickreferer=(_params||{}).clickreferer,
-  _referrer=clickreferer==56 ? 57 :32;
+  clickreferer=(_params||{}).clickreferer;
+//   _referrer=clickreferer==56 ? 57 :32;
+  if(clickreferer == 56){
+      _referrer = 57;
+  }else if( clickreferer == 71 ){
+      _referrer = 73;
+  }else{
+      _referrer = 32;
+  }
 
 
 /***

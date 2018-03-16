@@ -80,7 +80,7 @@ $(function () {
                     '</div>',
                     '<dl>',
                     '<dt><a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" title="{{product.corKeyword}}">{{product.corKeyword}}</a></dt>',
-                    '<dd><a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" onclick="sendUserlogsElement(\'UserBehavior_p4p_m_search_xunjia\')">询价</a></dd>',
+                    '<dd><a href="//m.hc360.com/supplyself/{{product.searchResultfoId}}.html" onclick="sendUserlogsElement(\'UserBehavior_p4p_m_search_xunjia\')"></a></dd>',
                     '</dl>',
                     '</li>',
                     '{{/each}}'
